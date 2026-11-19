@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academia Fernandinho Beltrão · Planos e matrículas 2027</title>
+<meta name="description" content="Painel de decisão do ciclo 2027 da Academia Fernandinho Beltrão: 5 modalidades, matriz de recursos, transição nov/2026–jan/2027 e leitura do perfil do Otávio (127/180 no ENEM 2026).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+<style>
+:root{
+  --paper:#F7F5EF; --card:#FFFFFF; --ink:#152220; --muted:#5E635E;
+  --line:#E4DFD3; --ctx:#BDB6A3; --accent:#1C6B58; --accent-2:#E8F0EC;
+  --neg:#A8342A; --navy:#0F2A33; --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  --gap:16px; --r:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px 56px}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(28,107,88,.28);overflow-wrap:anywhere}
+a:hover{border-bottom-color:var(--accent)}
+
+/* ---------- topbar ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.94);
+  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:1180px;margin:0 auto;padding:10px 28px;display:flex;align-items:center;gap:18px}
+.brand{font-family:"Iowan Old Style",Georgia,serif;font-size:15px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
+.brand span{color:var(--muted);font-weight:400}
+.nav{display:flex;gap:2px;flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{border:0;font-size:13px;color:var(--muted);padding:6px 10px;border-radius:7px;white-space:nowrap}
+.nav a:hover{background:#EFEBE0;color:var(--ink)}
+.nav a.on{background:var(--navy);color:#fff}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:12px;
+  padding:7px 11px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--ctx)}
+.shell{background:var(--navy);color:#F3F1E9;padding:34px 0 30px;margin-bottom:26px}
+.shell .in{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9FBDB4}
+h1{font-family:"Iowan Old Style",Georgia,serif;font-size:42px;line-height:1.08;font-weight:600;
+  letter-spacing:-.015em;margin:10px 0 12px;max-width:19ch}
+.shell p{margin:0;max-width:72ch;color:#CBD8D4;font-size:15px}
+.shell .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:#9FBDB4;font-family:var(--mono)}
+
+/* ---------- kpis ---------- */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:30px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 15px 13px;
+  display:flex;flex-direction:column;gap:2px;min-height:104px}
+.kpi .l{font-size:11.5px;color:var(--muted);letter-spacing:.01em}
+.kpi .v{font-family:"Iowan Old Style",Georgia,serif;font-size:29px;font-weight:600;letter-spacing:-.02em;line-height:1.05;margin-top:auto}
+.kpi .n{font-size:12px;color:var(--muted);line-height:1.35}
+.kpi .n b{color:var(--accent);font-weight:600}
+.kpi.alt .v{color:var(--accent)}
+
+/* ---------- secoes ---------- */
+section{margin:38px 0 0;scroll-margin-top:64px}
+.sh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:18px}
+.sh h2{font-family:"Iowan Old Style",Georgia,serif;font-size:23px;font-weight:600;margin:0;letter-spacing:-.01em}
+.sh .num{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em}
+.sh .hint{margin-left:auto;font-size:12px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+
+/* ---------- escada de planos ---------- */
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
+.toggle button{border:0;background:transparent;font:inherit;font-size:12px;padding:6px 12px;cursor:pointer;color:var(--muted)}
+.toggle button.on{background:var(--navy);color:#fff}
+.ladder{padding:6px 0}
+.prow{display:grid;grid-template-columns:168px 1fr 250px;gap:16px;align-items:center;
+  padding:13px 4px;border-bottom:1px dashed var(--line)}
+.prow:last-child{border-bottom:0}
+.pname{font-size:15px;font-weight:600}
+.ptag{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:1px}
+.pprice{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:4px}
+.pprice b{font-family:"Iowan Old Style",Georgia,serif;font-size:19px;color:var(--ink);letter-spacing:-.01em}
+.prow.hot .pname,.prow.hot .pprice b{color:var(--accent)}
+.track{height:20px;background:#F0EDE4;border-radius:5px;overflow:hidden;position:relative}
+.fill{height:100%;background:#A9A293;border-radius:5px;transition:width .35s ease}
+.prow.hot .fill{background:var(--accent)}
+.prow.hot .track{box-shadow:inset 0 0 0 1px rgba(28,107,88,.25)}
+.padd{font-size:12px;color:var(--ink);line-height:1.4}
+.padd em{display:block;font-style:normal;color:var(--muted);font-size:11.5px;margin-top:3px}
+.badge{display:inline-block;font-size:10px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--accent-2);color:var(--accent);padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:2px}
+.legend{font-size:11.5px;color:var(--muted);margin-top:12px;display:flex;gap:16px;flex-wrap:wrap}
+
+/* ---------- matriz ---------- */
+.mxwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+.mx{min-width:760px;display:grid;grid-template-columns:minmax(250px,1.6fr) repeat(5,1fr)}
+.mx > div{padding:9px 12px;border-bottom:1px solid #F1EDE3;font-size:12.5px}
+.mx .hd{font-size:12px;font-weight:600;border-bottom:1px solid var(--line);background:#FBFAF6}
+.mx .hd.hot{color:var(--accent)}
+.mx .rh{color:var(--ink);border-right:1px solid #F1EDE3}
+.mx .c{text-align:center;color:var(--ctx);font-family:var(--mono)}
+.mx .c.y{color:var(--accent);font-weight:700}
+.mx .c.x{color:#BFB9AA}
+.mx .c.hotcol{background:#FAFCFB}
+.mx .rowend{border-bottom:0}
+.mx .c small{display:block;font-family:inherit;font-size:10.5px;color:var(--muted);letter-spacing:0}
+.mxnote{font-size:11.5px;color:var(--muted);margin-top:10px}
+
+/* ---------- transicao ---------- */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px}
+.tcard.hot{border-color:rgba(28,107,88,.45);box-shadow:0 0 0 1px rgba(28,107,88,.12)}
+.tcard .t{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tcard h3{font-family:"Iowan Old Style",Georgia,serif;font-size:17px;margin:0;font-weight:600}
+.tcard .ts{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.tcard .q{font-size:12px;color:var(--muted);letter-spacing:.02em;text-transform:uppercase;font-family:var(--mono);font-size:10px}
+.tcard p{margin:0;font-size:13px;line-height:1.5}
+.tcard .foot{margin-top:auto;font-size:12px}
+.strip{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);margin:0 0 16px}
+.strip i{flex:1;height:1px;background:var(--ctx);position:relative}
+.strip i::after{content:"";position:absolute;right:0;top:-2.5px;width:6px;height:6px;border-radius:50%;background:var(--ctx)}
+.strip .now{color:var(--accent);font-weight:700}
+
+/* ---------- regras ---------- */
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.rule h3{margin:0 0 6px;font-size:14px;font-weight:600;display:flex;gap:8px;align-items:baseline}
+.rule h3 span{font-family:var(--mono);font-size:10.5px;color:var(--accent);letter-spacing:.08em}
+.rule p{margin:0;font-size:13px;line-height:1.55;color:#3C4743}
+.rule p b{color:var(--ink)}
+
+/* ---------- otavio ---------- */
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;align-items:start}
+.area{display:grid;grid-template-columns:150px 1fr 46px;gap:10px;align-items:center;padding:7px 0}
+.area .an{font-size:12.5px}
+.atrack{height:14px;background:#F0EDE4;border-radius:4px;overflow:hidden}
+.afill{height:100%;background:var(--ctx);border-radius:4px}
+.afill.bad{background:var(--neg)}
+.area .av{font-family:var(--mono);font-size:12px;text-align:right}
+.area .d{grid-column:1/-1;font-size:11px;color:var(--muted);margin-top:-4px}
+.delta{font-family:var(--mono);font-size:10.5px;padding:1px 5px;border-radius:4px;background:#F0EDE4;color:var(--muted)}
+.delta.up{background:var(--accent-2);color:var(--accent)}
+.delta.zero{background:#F7E6E3;color:var(--neg)}
+.big{font-family:"Iowan Old Style",Georgia,serif;font-size:38px;line-height:1;letter-spacing:-.02em;margin:2px 0 2px}
+.big small{font-size:15px;color:var(--muted);font-family:inherit}
+.steps{counter-reset:s;list-style:none;padding:0;margin:12px 0 0}
+.steps li{counter-increment:s;position:relative;padding-left:26px;font-size:13px;line-height:1.5;margin-bottom:9px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;
+  background:var(--navy);color:#fff;font-family:var(--mono);font-size:10.5px;display:flex;align-items:center;justify-content:center}
+.cost{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+.crow{display:grid;grid-template-columns:92px 1fr 82px;gap:10px;align-items:center;padding:4px 0;font-size:12px}
+.crow .ct{height:12px;background:#F0EDE4;border-radius:3px;overflow:hidden}
+.crow .cf{height:100%;background:var(--ctx)}
+.crow.lead .cf{background:var(--accent)}
+.crow .cv{font-family:var(--mono);text-align:right;color:var(--muted)}
+.crow.lead .cv{color:var(--accent);font-weight:700}
+.disclaimer{font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+
+/* ---------- links / footer ---------- */
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;font-size:13px}
+.lk b{display:block;font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:400}
+.lk .tel{font-family:var(--mono);font-size:15px;color:var(--ink)}
+.vids{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:12px;font-size:12.5px}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6;overflow-wrap:anywhere}
+footer i{font-style:italic}
+.lk{overflow-wrap:anywhere}
+footer b{color:#3C4743;font-weight:600}
+
+@media (max-width:1000px){
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .tl{grid-template-columns:repeat(2,1fr)}
+  .prow{grid-template-columns:140px 1fr}
+  .padd{grid-column:1/-1;padding-left:0}
+  .two{grid-template-columns:1fr}
+  .links{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .wrap{padding:0 16px 40px}
+  .topbar .in{padding:8px 16px;gap:10px}
+  .shell .in{padding:0 16px}
+  h1{font-size:30px}
+  .kpis{grid-template-columns:1fr 1fr}
+  .kpi{min-height:0;padding:12px}
+  .kpi .v{font-size:24px}
+  .tl,.rules,.links{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr;gap:8px}
+  .area{grid-template-columns:110px 1fr 40px}
+  .crow{grid-template-columns:74px 1fr 68px}
+  .sh .hint{display:none}
+  h1{max-width:none}
+}
+@media print{
+  body{background:#fff}
+  .topbar,.toggle,.btn{display:none!important}
+  .shell{background:#fff;color:#000;border-bottom:2px solid #000;padding:0 0 14px}
+  .shell p,.shell .meta,.eyebrow{color:#333}
+  .card,.tcard,.rule,.lk{break-inside:avoid;border-color:#bbb}
+  section{margin-top:22px}
+  a{color:#000;border:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <div class="brand">Academia FB <span>· 2027</span></div>
+  <nav class="nav">
+    <a href="#visao">Visão</a><a href="#planos">Planos</a><a href="#matriz">Matriz</a>
+    <a href="#transicao">Transição</a><a href="#regras">Regras</a><a href="#otavio">Otávio</a><a href="#contato">Contatos</a>
+  </nav>
+  <button class="btn" id="print" title="Imprimir / salvar em PDF">Imprimir</button>
+</div></div>
+
+<header class="shell" id="visao"><div class="in">
+  <div class="eyebrow">Ciclo 2027 · live de 18/11/2026 · 38 min 50 s</div>
+  <h1>Planos, preços e a ponte até fevereiro</h1>
+  <p>Cinco modalidades cumulativas de R$ 200 a R$ 1.500, quatro estratégias de transição para nov/jan e uma regra dura: aula ao vivo expira em 24 horas. Abaixo, o que cada plano compra de fato e onde o perfil de 127 acertos entra.</p>
+  <div class="meta"><span>Fernando Beltrão + Artur</span><span>8º ano → Ex-3º</span><span>fonte: nota do vault (live 18/11/2026)</span></div>
+</div></header>
+
+<div class="wrap">
+
+  <section class="kpis" style="margin-top:0">
+    <div class="card kpi"><div class="l">Mensalidade de entrada</div><div class="v">R$ 200</div>
+      <div class="n">Flash · <b>R$ 0</b> para escola pública (só matrícula)</div></div>
+    <div class="card kpi"><div class="l">Plano da maioria</div><div class="v">R$ 1.000</div>
+      <div class="n">Top · veterano ativo tem valor congelado</div></div>
+    <div class="card kpi"><div class="l">Estratégias de transição</div><div class="v">4</div>
+      <div class="n">nov/2026 → jan/2027 · início imediato</div></div>
+    <div class="card kpi alt"><div class="l">Validade da aula ao vivo</div><div class="v">24 h</div>
+      <div class="n">módulo e tarefa da semana caem em <b>7 dias</b></div></div>
+    <div class="card kpi"><div class="l">Provas no ano (1º dia)</div><div class="v">200+</div>
+      <div class="n">ímpar: Linguagens · par: Humanas</div></div>
+  </section>
+
+  <section id="planos">
+    <div class="sh"><span class="num">01</span><h2>Escada de planos</h2>
+      <span class="hint">cada nível inclui tudo do anterior</span></div>
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px 12px;flex-wrap:wrap;margin-bottom:6px">
+        <div style="font-size:12px;color:var(--muted)">Mensalidade por modalidade · barra proporcional a R$ 1.500</div>
+        <div class="toggle"><button id="m-mes" class="on">mês</button><button id="m-ano">ano (12×)</button></div>
+      </div>
+      <div class="ladder">
+<div class="prow" data-preco="200"><div><span class="pname">Flash</span><span class="ptag">entrada</span><div class="pprice"><b class="pval">R$ 200</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:13.3%"></div></div><div class="padd">Salas por série · 1 matéria por dia · aula curta + guia visual<em>Sem simulados inéditos e sem plantão ao vivo</em></div></div>
+<div class="prow" data-preco="500"><div><span class="pname">Estratégica</span><span class="ptag">+ foco no 2º dia</span><div class="pprice"><b class="pval">R$ 500</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:33.3%"></div></div><div class="padd">TutorMundi ao vivo · Semanaula por série · simulados semanais</div></div>
+<div class="prow" data-preco="800"><div><span class="pname">Especial</span><span class="ptag">+ pré-vestibular completo</span><div class="pprice"><b class="pval">R$ 800</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:53.3%"></div></div><div class="padd">TrilhaEdu · 1 Gestor de Aprendizagem incluso<em>Não inclui as 3 exclusividades da Top</em></div></div>
+<div class="prow hot" data-preco="1000"><div><span class="pname">Top<span class="badge">o plano da maioria</span></span><span class="ptag">o plano da maioria</span><div class="pprice"><b class="pval">R$ 1.000</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:66.7%"></div></div><div class="padd">Mentoria Geral no WhatsApp · Roteiro Adaptado · Provas sob demanda<em>Veterano ativo mantém o valor antigo congelado</em></div></div>
+<div class="prow" data-preco="1500"><div><span class="pname">Super</span><span class="ptag">+ gestores modulares</span><div class="pprice"><b class="pval">R$ 1.500</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:100.0%"></div></div><div class="padd">Tudo da Top · 1 gestor por R$ 500/mês · 2º e 3º gestor com aval do 1º<em>R$ 1.500 já com um gestor contratado</em></div></div>
+      </div>
+      <div class="legend"><span id="ladder-note">mensalidade cheia · matrícula não divulgada na live</span>
+        <span>·</span><span>valores da live de 18/11/2026</span></div>
+    </div>
+  </section>
+
+  <section id="matriz">
+    <div class="sh"><span class="num">02</span><h2>O que cada plano compra</h2>
+      <span class="hint">✓ incluso · — não incluso</span></div>
+    <div class="mxwrap"><div class="mx">
+<div class="hd rh">Recurso</div><div class="hd">Flash</div><div class="hd">Estratégica</div><div class="hd">Especial</div><div class="hd hot">Top</div><div class="hd">Super</div><div class="rh">Salas exclusivas por série (8º → Ex-3º)</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Cronograma anual: 1 matéria por dia</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Foco intensivo nas 4 matérias do 2º dia</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">TutorMundi — plantão com monitor ao vivo</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Semanaula — aulas ao vivo por série</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Simulados inéditos semanais</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Pré-vestibular digital completo</div><div class="c x">—</div><div class="c x">—</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">TrilhaEdu — micro-habilidades</div><div class="c x">—</div><div class="c x">—</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Gestor de Aprendizagem</div><div class="c" style="color:var(--ink);font-family:inherit">—</div><div class="c" style="color:var(--ink);font-family:inherit">—</div><div class="c" style="color:var(--ink);font-family:inherit">1 incluso</div><div class="c hotcol" style="color:var(--ink);font-family:inherit">—</div><div class="c" style="color:var(--ink);font-family:inherit">1+ (R$ 500 cada)</div><div class="rh">Mentoria Geral — WhatsApp direto</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Roteiro Adaptado (Farol/Retrovisor)</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Provas sob demanda ilimitadas</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div>
+    </div></div>
+    <div class="mxnote">A expiração de 24 h (aula) e 7 dias (módulo) é regra metodológica da casa e vale em todas as modalidades — não é um recurso de plano. Salas separadas por série vão do 8º ano ao Ex-3º.</div>
+  </section>
+
+  <section id="transicao">
+    <div class="sh"><span class="num">03</span><h2>Transição: nov/2026 → jan/2027</h2>
+      <span class="hint">30 min a 2 h por dia, conforme o caso</span></div>
+    <div class="strip"><span class="now">pós-ENEM</span><i></i><span>SSA/UPE</span><i></i><span>carnaval</span><i></i><span>1º de fevereiro · ano letivo</span></div>
+    <div class="tl">
+<div class="tcard"><div class="t"><h3>TrilhaEdu</h3><span class="ts">15:54</span></div><div class="q">para quem</div><p>Recuperar Matemática básica, ou teoria que não vira acerto em Física, Química e Matemática.</p><div class="q">como funciona</div><p>Trilhas de micro-habilidades, do pré-requisito para cima.</p><div class="foot"><a href="https://youtu.be/13v3fFfTgZE">vídeo de ~3 min →</a></div></div>
+<div class="tcard"><div class="t"><h3>Farol</h3><span class="ts">16:34</span></div><div class="q">para quem</div><p>Alto desempenho do 8º/9º ao 2º ano — medalhista ou sem pendência escolar.</p><div class="q">como funciona</div><p>Antecipar conteúdo da série seguinte. Quem vai ao 1º ano: Física.</p><div class="foot"><a href="https://youtu.be/btMQffBme2g">vídeo de ~3 min →</a></div></div>
+<div class="tcard"><div class="t"><h3>Retrovisor</h3><span class="ts">17:14</span></div><div class="q">para quem</div><p>Avançou de série com lacuna específica (ex.: Química ou Biologia do ano anterior).</p><div class="q">como funciona</div><p>Cronograma cirúrgico de revisão da lacuna antes de fevereiro.</p><div class="foot"><a href="https://youtu.be/lmr8uzArYgY">vídeo de ~3 min →</a></div></div>
+<div class="tcard hot"><div class="t"><h3>Estratégia das Provas<span class="badge">perfil do Otávio (127)</span></h3><span class="ts">17:51</span></div><div class="q">para quem</div><p>Concluiu o 3º ano ou Ex-3º com 100+ acertos e está saturado do formato ENEM.</p><div class="q">como funciona</div><p>1 a 3 provas por semana em escala 3x4, 1–2 h/dia. Vunesp (130–150 acertos) ou Fuvest + Unicamp + Unesp (160+).</p><div class="foot"><a href="https://youtu.be/AjUyD9NtjD4">vídeo de ~3 min →</a></div></div>
+    </div>
+    <div class="mxnote">Diagnóstico da live: o calendário pernambucano (SSA cedo + ENEM em novembro) abre quase três meses de motor desligado, enquanto candidatos de outros estados seguem em ritmo de segunda fase. As quatro rotas existem para cobrir esse vão — a escolha é pelo tipo de lacuna, não pelo preço.</div>
+  </section>
+
+  <section id="regras">
+    <div class="sh"><span class="num">04</span><h2>Regras do jogo</h2>
+      <span class="hint">o que está escrito na live</span></div>
+    <div class="rules">
+      <div class="rule"><h3><span>01</span> Sem fidelidade</h3>
+        <p>Pré-pago mês a mês — <b>"pagou, estuda"</b>. Sem contrato anual, sem retenção no cartão, sem multa: cancela a qualquer momento, inclusive por aprovação no vestibular.</p></div>
+      <div class="rule"><h3><span>02</span> Bolsa é social, não por nota</h3>
+        <p><b>Desconto zero</b> por mérito: nota alta de colégio privado, militar ou de aplicação não gera abatimento. Todo o subsídio vai para a <b>Flash gratuita de escola pública</b>.</p></div>
+      <div class="rule"><h3><span>03</span> Preço congelado exige continuidade</h3>
+        <p>Quem já é aluno não sofre reajuste e tem a transição inclusa na mensalidade. Sair (por exemplo, para bolsa em outro cursinho) e voltar significa <b>tabela cheia</b>.</p></div>
+      <div class="rule"><h3><span>04</span> Expiração deliberada</h3>
+        <p>Aula ao vivo sai do ar em <b>24 h</b>; módulo e tarefa da semana são apagados em <b>7 dias</b>. O atraso custa conteúdo — é a trava contra procrastinação.</p></div>
+    </div>
+  </section>
+
+  <section id="otavio">
+    <div class="sh"><span class="num">05</span><h2>Onde o Otávio entra</h2>
+      <span class="hint">cruzamento com o desempenho no ENEM 2026</span></div>
+    <div class="two">
+      <div class="card">
+        <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Ponto de partida · ENEM 2026</div>
+        <div class="big">127<small>/180</small></div>
+        <div style="font-size:12.5px;color:var(--muted)">70,6% de acerto · média simples projetada <b style="color:var(--ink)">684,5</b> (TRI 2025)</div>
+        <div style="margin-top:12px">
+<div class="area"><div class="an">Ciências Humanas</div><div class="atrack"><div class="afill" style="width:78%"></div></div><div class="av">35/45</div><div class="d"><span class="delta up">+8 acertos vs 2025</span> · nota TRI ~686</div></div>
+<div class="area"><div class="an">Linguagens</div><div class="atrack"><div class="afill" style="width:82%"></div></div><div class="av">37/45</div><div class="d"><span class="delta up">+1 acertos vs 2025</span> · nota TRI ~652</div></div>
+<div class="area"><div class="an">Ciências da Natureza</div><div class="atrack"><div class="afill bad" style="width:58%"></div></div><div class="av">26/45</div><div class="d"><span class="delta zero">0 acertos vs 2025</span> · nota TRI ~643</div></div>
+<div class="area"><div class="an">Matemática</div><div class="atrack"><div class="afill" style="width:64%"></div></div><div class="av">29/45</div><div class="d"><span class="delta up">+1 acertos vs 2025</span> · nota TRI ~757</div></div>
+        </div>
+        <div class="disclaimer">Humanas ganhou 8 acertos e mudou de patamar; Natureza repetiu 26/45 — é a área de <b>peso 3 na UFPE e na FPS</b> e a que mais limita o escore final (+3,04 por acerto na média ponderada, contra +0,92 de Humanas).</div>
+      </div>
+      <div class="card">
+        <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Leitura do painel</div>
+        <ol class="steps">
+          <li><b>Transição:</b> 127 acertos caem na faixa <b>121–140</b> da régua da casa → <b>Dose 1 da Vunesp</b> (1 prova/semana + 2 dias de revisão) e Dose 2 se aguentar. Na live de 18/11, a Vunesp é a banca indicada para 130–150 acertos — 127 está no piso dela.</li>
+          <li><b>Ano letivo:</b> rotina do 1º dia de 7h às 9h (ímpar Linguagens, par Humanas) + 1 simulado inédito por semana — é o gargalo de velocidade de leitura, 200+ provas no ano.</li>
+          <li><b>Onde gastar acompanhamento:</b> Natureza parou em 26 com peso 3 — o ataque é <b>micro-habilidades + Estratégia do Degrau</b>, o que pede <b>gestor em Natureza</b>, não em Humanas.</li>
+          <li><b>Qual plano:</b> Top (R$ 1.000) não tem gestor; Especial (R$ 800) tem 1 gestor mas perde Mentoria, Roteiro Adaptado e Provas sob demanda; Super (R$ 1.500) é Top + gestor.</li>
+        </ol>
+        <div class="cost">
+          <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Custo de 12 meses</div>
+<div class="crow"><span>Flash</span><span class="ct"><span class="cf" style="width:13%"></span></span><span class="cv">R$ 2.400</span></div>
+<div class="crow"><span>Estratégica</span><span class="ct"><span class="cf" style="width:33%"></span></span><span class="cv">R$ 6.000</span></div>
+<div class="crow"><span>Especial</span><span class="ct"><span class="cf" style="width:53%"></span></span><span class="cv">R$ 9.600</span></div>
+<div class="crow lead"><span>Top</span><span class="ct"><span class="cf" style="width:67%"></span></span><span class="cv">R$ 12.000</span></div>
+<div class="crow"><span>Super</span><span class="ct"><span class="cf" style="width:100%"></span></span><span class="cv">R$ 18.000</span></div>
+        </div>
+        <div class="disclaimer">Leitura derivada das duas notas do vault, não é recomendação da Academia. Matrícula não foi divulgada; a conta usa 12 mensalidades cheias e ignora reajuste (não há para veterano ativo).</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="sh"><span class="num">06</span><h2>Matrícula e contato</h2>
+      <span class="hint">links citados na live</span></div>
+    <div class="links">
+      <div class="lk"><b>Formulário de matrícula</b><a href="https://online.academiafernandinhobeltrao.com.br/online/matriculas2026/">online.academiafernandinhobeltrao.com.br</a></div>
+      <div class="lk"><b>Fale com os diretores</b><a href="https://sites.google.com/view/2019comecou/diretores">sites.google.com/view/2019comecou/diretores</a></div>
+      <div class="lk"><b>Telefone / WhatsApp</b><span class="tel">(81) 98763-2674</span></div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Vídeos de detalhamento (~3 min)</div>
+      <div class="vids"><a href="https://youtu.be/xsAfVK2EItc">Comparando as Academias 2027</a> · <a href="https://youtu.be/n9bwXg81G5M">Flash explicada</a> · <a href="https://youtu.be/KnYciRlx85s">Estratégica explicada</a> · <a href="https://youtu.be/B4BHvGKVels">Top explicada</a> · <a href="https://youtu.be/_n9SliBIIWc">Super explicada</a></div>
+      <div class="mxnote">A modalidade Especial não teve vídeo próprio divulgado na live — só o trecho ao vivo (11:48–12:45). Transição: <a href="https://youtu.be/AjUyD9NtjD4">Estratégia das Provas</a> · <a href="https://youtu.be/lmr8uzArYgY">Retrovisor</a> · <a href="https://youtu.be/btMQffBme2g">Farol</a> · <a href="https://youtu.be/13v3fFfTgZE">TrilhaEdu</a>.</div>
+    </div>
+  </section>
+
+  <footer>
+    <b>Fontes:</b> live "Informações e Matrículas 2027 — Academia Fernandinho Beltrão", 18/11/2026, 38 min 50 s (<a href="https://www.youtube.com/live/3tTPb7-457k">youtube.com/live/3tTPb7-457k</a>) — planos, preços, matriz, transição e regras; live pós-ENEM de 17/11/2026 — régua de acertos, dose de provas e rotina do 1º dia; nota <i>Desempenho ENEM 2025 × 2026 do Otávio</i> — acertos e projeção TRI.<br>
+    Nenhum preço, condição ou recurso deste painel vem de fora dessas notas do vault. A projeção TRI usa os microdados do ENEM 2025 e <b>não é nota oficial</b> (resultado individual sai em janeiro/2027). Minutagens referem-se à transmissão de 18/11. Painel gerado em 19/11/2026.
+  </footer>
+</div>
+
+<script>
+(function(){
+  var nav=document.querySelectorAll('.nav a');
+  var secs=[].map.call(nav,function(a){return document.querySelector(a.getAttribute('href'));});
+  function spy(){
+    var y=window.scrollY+120,idx=0;
+    secs.forEach(function(s,i){ if(s&&s.offsetTop<=y) idx=i; });
+    nav.forEach(function(a,i){ a.classList.toggle('on',i===idx); });
+  }
+  window.addEventListener('scroll',spy,{passive:true}); spy();
+
+  document.getElementById('print').addEventListener('click',function(){window.print();});
+
+  var modo='mes';
+  var btnM=document.getElementById('m-mes'), btnA=document.getElementById('m-ano');
+  var rows=[].slice.call(document.querySelectorAll('.prow'));
+  function pinta(){
+    rows.forEach(function(r){
+      var p=+r.dataset.preco, f=r.querySelector('.fill'),
+          lab=r.querySelector('.pval'), anual=(modo==='ano');
+      var v=anual?p*12:p;
+      f.style.width=(p/1500*100)+'%';
+      lab.textContent='R$ '+v.toLocaleString('pt-BR');
+      r.querySelector('.punit').textContent=anual?'/ano':'/mês';
+    });
+    btnM.classList.toggle('on',modo==='mes');
+    btnA.classList.toggle('on',modo==='ano');
+    document.getElementById('ladder-note').textContent = (modo==='ano')
+      ? '12 mensalidades · matrícula não divulgada na live'
+      : 'mensalidade cheia · matrícula não divulgada na live';
+  }
+  btnM.addEventListener('click',function(){modo='mes';pinta();});
+  btnA.addEventListener('click',function(){modo='ano';pinta();});
+  pinta();
+})();
+</script>
+</body>
+</html>
