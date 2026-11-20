@@ -235,9 +235,7 @@ section{margin:32px 0 0}
 /* ---------------------------------------------------------------- matriz */
 .mxwrap{display:none}
 .mxm{display:block}
-.chips{display:flex;gap:6px;overflow-x:auto;margin:0 -2px 4px;padding:2px 2px 10px;
-  scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.chips::-webkit-scrollbar{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 -2px 4px;padding:2px 2px 6px}
 .chip{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
   font:inherit;font-size:12px;font-weight:560;letter-spacing:-.01em;min-height:40px;padding:10px 11px;
   border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent;
