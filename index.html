@@ -2,246 +2,472 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Academia Fernandinho Beltrão · Planos e matrículas 2027</title>
 <meta name="description" content="Painel de decisão do ciclo 2027 da Academia Fernandinho Beltrão: 5 modalidades, matriz de recursos, transição nov/2026–jan/2027 e leitura do perfil do Otávio (127/180 no ENEM 2026).">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F2EC">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
-<style>
-:root{
-  --paper:#F7F5EF; --card:#FFFFFF; --ink:#152220; --muted:#5E635E;
-  --line:#E4DFD3; --ctx:#BDB6A3; --accent:#1C6B58; --accent-2:#E8F0EC;
-  --neg:#A8342A; --navy:#0F2A33; --mono:ui-monospace,"SF Mono",Menlo,monospace;
-  --gap:16px; --r:12px;
+<script>try{var t=localStorage.getItem('afb-theme');document.documentElement.dataset.theme=t||((window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');}catch(e){}</script>
+<style>:root{
+  color-scheme:light;
+  --bg:#F4F2EC; --surface:#FFFFFF; --surface-2:#FBFAF6;
+  --ink:#111E1B; --ink-2:#5A6560; --ink-3:#77837D;
+  --line:rgba(17,30,27,.12); --line-2:rgba(17,30,27,.065);
+  --accent:#1C6B58; --accent-soft:rgba(28,107,88,.10);
+  --track:#EAE6DA; --fill:#B3AD9C;
+  --btn-fill:#14503F; --on-btn:#FFFFFF;
+  --chrome:rgba(244,242,236,.80);
+  --hero:#0E2A25; --hero-ink:#F0F3EB; --hero-ink-2:#A2BDB5;
+  --shadow:0 1px 2px rgba(17,30,27,.05),0 10px 26px -18px rgba(17,30,27,.45);
+  --r:16px; --r-sm:12px;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+  --barh:56px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);
-  font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px 56px}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(28,107,88,.28);overflow-wrap:anywhere}
-a:hover{border-bottom-color:var(--accent)}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0B1210; --surface:#141D1B; --surface-2:#101917;
+  --ink:#ECF1EC; --ink-2:#A7B4AE; --ink-3:#8A9791;
+  --line:rgba(255,255,255,.14); --line-2:rgba(255,255,255,.075);
+  --accent:#5CCBA9; --accent-soft:rgba(92,203,169,.15);
+  --track:#22302C; --fill:#65746E;
+  --btn-fill:#186A55; --on-btn:#FFFFFF;
+  --chrome:rgba(11,18,16,.80);
+  --hero:#061A16; --hero-ink:#EAF2EC; --hero-ink-2:#8FB0A7;
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 14px 32px -20px rgba(0,0,0,.9);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;
+  scroll-padding-top:calc(var(--barh) + 16px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-optical-sizing:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:clip;padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+b,strong{font-weight:640}
+img,svg{max-width:100%}
+:where(a){color:var(--accent);text-decoration:none;overflow-wrap:anywhere}
+:where(a):hover{text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--surface);color:var(--ink);
+  padding:10px 14px;border-radius:0 0 12px 0;z-index:99}
+.skip:focus{left:0}
 
-/* ---------- topbar ---------- */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.94);
-  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
-.topbar .in{max-width:1180px;margin:0 auto;padding:10px 28px;display:flex;align-items:center;gap:18px}
-.brand{font-family:"Iowan Old Style",Georgia,serif;font-size:15px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
-.brand span{color:var(--muted);font-weight:400}
-.nav{display:flex;gap:2px;flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}
-.nav a{border:0;font-size:13px;color:var(--muted);padding:6px 10px;border-radius:7px;white-space:nowrap}
-.nav a:hover{background:#EFEBE0;color:var(--ink)}
-.nav a.on{background:var(--navy);color:#fff}
-.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:12px;
-  padding:7px 11px;border-radius:8px;cursor:pointer;white-space:nowrap}
-.btn:hover{border-color:var(--ctx)}
-.shell{background:var(--navy);color:#F3F1E9;padding:34px 0 30px;margin-bottom:26px}
-.shell .in{max-width:1180px;margin:0 auto;padding:0 28px}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9FBDB4}
-h1{font-family:"Iowan Old Style",Georgia,serif;font-size:42px;line-height:1.08;font-weight:600;
-  letter-spacing:-.015em;margin:10px 0 12px;max-width:19ch}
-.shell p{margin:0;max-width:72ch;color:#CBD8D4;font-size:15px}
-.shell .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:#9FBDB4;font-family:var(--mono)}
+/* ---------------------------------------------------------------- barra */
+.bar{position:sticky;top:0;z-index:60;background:var(--chrome);
+  -webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);
+  border-bottom:.5px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:8px;height:56px;
+  max-width:1120px;margin:0 auto;padding:0 14px}
+.brand{flex:0 0 auto;color:var(--ink);font-size:15px;font-weight:660;letter-spacing:-.015em;
+  padding:10px 2px;min-height:44px;display:inline-flex;align-items:center;gap:5px}
+.brand:hover{text-decoration:none}
+.brand span{color:var(--ink-2);font-weight:520;font-size:13px;letter-spacing:0}
+.nav{display:none}
+.acts{margin-left:auto;display:flex;align-items:center;gap:2px}
+.ic{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:var(--ink-2);
+  width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;
+  border-radius:12px;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  transition:background .18s ease,color .18s ease,transform .12s ease}
+.ic:hover{background:var(--surface-2);color:var(--ink)}
+.ic:active{transform:scale(.94)}
+.ic svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.ic .i-sun{display:none}
+:root[data-theme="dark"] .ic .i-sun{display:block}
+:root[data-theme="dark"] .ic .i-moon{display:none}
+.ic:focus-visible,.tab:focus-visible,.chip:focus-visible,.seg button:focus-visible,
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-/* ---------- kpis ---------- */
-.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:30px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 15px 13px;
-  display:flex;flex-direction:column;gap:2px;min-height:104px}
-.kpi .l{font-size:11.5px;color:var(--muted);letter-spacing:.01em}
-.kpi .v{font-family:"Iowan Old Style",Georgia,serif;font-size:29px;font-weight:600;letter-spacing:-.02em;line-height:1.05;margin-top:auto}
-.kpi .n{font-size:12px;color:var(--muted);line-height:1.35}
+/* ---------------------------------------------------------------- hero */
+.hero{background:var(--hero);color:var(--hero-ink);padding:26px 18px 30px;
+  border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:-40% 40% 40% -40%;
+  background:radial-gradient(60% 60% at 30% 20%,rgba(92,203,169,.18),transparent 70%);
+  pointer-events:none}
+.hero-in{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+.eyebrow{margin:0 0 10px;font-family:var(--mono);font-size:10.5px;line-height:1.4;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2)}
+.hero h1{margin:0 0 12px;font-size:clamp(30px,8.6vw,54px);line-height:1.02;
+  letter-spacing:-.035em;font-weight:700;max-width:16ch}
+.lede{margin:0;font-size:15.5px;line-height:1.5;color:var(--hero-ink-2);max-width:62ch}
+.hero-meta{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 0;padding:0}
+.hero-meta li{font-family:var(--mono);font-size:10.5px;letter-spacing:.03em;
+  color:var(--hero-ink-2);border:.5px solid rgba(255,255,255,.22);border-radius:999px;
+  padding:4px 9px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------------------------------------------------------------- base */
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px 44px}
+section{margin:32px 0 0}
+.sh{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
+  padding-bottom:10px;border-bottom:1px solid var(--line);margin:0 0 14px}
+.sh h2{margin:0;font-size:clamp(19px,4.9vw,23px);line-height:1.15;
+  letter-spacing:-.025em;font-weight:670}
+.sh .num{font:520 10.5px/1 var(--mono);letter-spacing:.13em;color:var(--accent)}
+.sh .hint{display:none}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:16px;box-shadow:var(--shadow)}
+.note{margin:10px 0 0;font-size:11.5px;line-height:1.55;color:var(--ink-2)}
+.note b{color:var(--ink)}
+.micro{margin:0 0 8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-2)}
+
+/* ---------------------------------------------------------------- kpis */
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:13px 14px;display:flex;flex-direction:column;gap:3px;min-height:100px;
+  box-shadow:var(--shadow)}
+.kpi .l{font-size:11.5px;line-height:1.35;color:var(--ink-2)}
+.kpi .v{margin-top:auto;font-size:clamp(23px,6.4vw,29px);line-height:1.05;
+  letter-spacing:-.03em;font-weight:690;font-variant-numeric:tabular-nums}
+.kpi .n{font-size:11.5px;line-height:1.35;color:var(--ink-2)}
 .kpi .n b{color:var(--accent);font-weight:600}
 .kpi.alt .v{color:var(--accent)}
+.kpi:nth-child(5){grid-column:1/-1;min-height:0}
 
-/* ---------- secoes ---------- */
-section{margin:38px 0 0;scroll-margin-top:64px}
-.sh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:18px}
-.sh h2{font-family:"Iowan Old Style",Georgia,serif;font-size:23px;font-weight:600;margin:0;letter-spacing:-.01em}
-.sh .num{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em}
-.sh .hint{margin-left:auto;font-size:12px;color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
-
-/* ---------- escada de planos ---------- */
-.toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
-.toggle button{border:0;background:transparent;font:inherit;font-size:12px;padding:6px 12px;cursor:pointer;color:var(--muted)}
-.toggle button.on{background:var(--navy);color:#fff}
-.ladder{padding:6px 0}
-.prow{display:grid;grid-template-columns:168px 1fr 250px;gap:16px;align-items:center;
-  padding:13px 4px;border-bottom:1px dashed var(--line)}
-.prow:last-child{border-bottom:0}
-.pname{font-size:15px;font-weight:600}
-.ptag{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:1px}
-.pprice{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:4px}
-.pprice b{font-family:"Iowan Old Style",Georgia,serif;font-size:19px;color:var(--ink);letter-spacing:-.01em}
-.prow.hot .pname,.prow.hot .pprice b{color:var(--accent)}
-.track{height:20px;background:#F0EDE4;border-radius:5px;overflow:hidden;position:relative}
-.fill{height:100%;background:#A9A293;border-radius:5px;transition:width .35s ease}
+/* ---------------------------------------------------------------- planos */
+.ladder{padding:2px 0}
+.prow{padding:15px 0;border-bottom:1px solid var(--line-2)}
+.prow:last-child{border-bottom:0;padding-bottom:4px}
+.phead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.pname{margin:0;font-size:16px;line-height:1.25;font-weight:660;letter-spacing:-.015em;
+  display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.ptag{margin:3px 0 0;font-size:12px;line-height:1.4;color:var(--ink-2)}
+.pprice{margin:0;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pprice b{display:block;font-size:21px;line-height:1.12;letter-spacing:-.035em;font-weight:690}
+.pprice span{font-size:11px;color:var(--ink-2)}
+.track{margin:10px 0 9px;height:8px;border-radius:5px;background:var(--track);overflow:hidden}
+.fill{display:block;height:100%;width:100%;border-radius:5px;background:var(--fill);
+  transform-origin:0 50%;transform:scaleX(var(--w,.2));
+  transition:transform .62s cubic-bezier(.32,.72,0,1)}
 .prow.hot .fill{background:var(--accent)}
-.prow.hot .track{box-shadow:inset 0 0 0 1px rgba(28,107,88,.25)}
-.padd{font-size:12px;color:var(--ink);line-height:1.4}
-.padd em{display:block;font-style:normal;color:var(--muted);font-size:11.5px;margin-top:3px}
-.badge{display:inline-block;font-size:10px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;
-  background:var(--accent-2);color:var(--accent);padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:2px}
-.legend{font-size:11.5px;color:var(--muted);margin-top:12px;display:flex;gap:16px;flex-wrap:wrap}
+.prow.hot{background:var(--accent-soft);border-radius:14px;
+  padding-inline:12px;margin-inline:-12px;border-bottom-color:transparent}
+.prow.hot .pname b{color:var(--accent)}
+.padd{margin:0;font-size:13px;line-height:1.5;color:var(--ink)}
+.pnote{display:block;margin-top:4px;font-size:11.5px;line-height:1.45;color:var(--ink-2)}
+.badge{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+  text-transform:uppercase;background:var(--accent-soft);color:var(--accent);
+  border:.5px solid rgba(28,107,88,.28);padding:2px 6px;border-radius:5px;font-weight:500}
+.ladder-top{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  flex-wrap:wrap;margin:0 0 10px}
+.ladder-top p{margin:0;font-size:12px;line-height:1.4;color:var(--ink-2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin:12px 0 0;padding-top:11px;
+  border-top:1px solid var(--line-2);font-size:11.5px;color:var(--ink-2)}
+.legend span:first-child{flex:1 1 200px}
 
-/* ---------- matriz ---------- */
-.mxwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
-.mx{min-width:760px;display:grid;grid-template-columns:minmax(250px,1.6fr) repeat(5,1fr)}
-.mx > div{padding:9px 12px;border-bottom:1px solid #F1EDE3;font-size:12.5px}
-.mx .hd{font-size:12px;font-weight:600;border-bottom:1px solid var(--line);background:#FBFAF6}
-.mx .hd.hot{color:var(--accent)}
-.mx .rh{color:var(--ink);border-right:1px solid #F1EDE3}
-.mx .c{text-align:center;color:var(--ctx);font-family:var(--mono)}
-.mx .c.y{color:var(--accent);font-weight:700}
-.mx .c.x{color:#BFB9AA}
-.mx .c.hotcol{background:#FAFCFB}
-.mx .rowend{border-bottom:0}
-.mx .c small{display:block;font-family:inherit;font-size:10.5px;color:var(--muted);letter-spacing:0}
-.mxnote{font-size:11.5px;color:var(--muted);margin-top:10px}
+/* ---------------------------------------------------------------- segmentado */
+.seg{position:relative;display:flex;gap:2px;padding:3px;background:var(--track);
+  border-radius:12px;isolation:isolate}
+.seg button{position:relative;z-index:1;flex:1 1 0;border:0;background:transparent;
+  color:var(--ink-2);font:inherit;font-size:12.5px;font-weight:560;letter-spacing:-.01em;
+  min-height:40px;padding:9px 10px;border-radius:9px;cursor:pointer;white-space:nowrap;
+  -webkit-tap-highlight-color:transparent;transition:color .22s ease}
+.seg button[aria-selected="true"]{color:var(--ink)}
+.seg-thumb{position:absolute;top:3px;bottom:3px;left:0;width:0;z-index:0;border-radius:9px;
+  background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.14),0 0 0 .5px rgba(0,0,0,.05);
+  will-change:transform,width}
 
-/* ---------- transicao ---------- */
-.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px}
-.tcard.hot{border-color:rgba(28,107,88,.45);box-shadow:0 0 0 1px rgba(28,107,88,.12)}
-.tcard .t{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.tcard h3{font-family:"Iowan Old Style",Georgia,serif;font-size:17px;margin:0;font-weight:600}
-.tcard .ts{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
-.tcard .q{font-size:12px;color:var(--muted);letter-spacing:.02em;text-transform:uppercase;font-family:var(--mono);font-size:10px}
-.tcard p{margin:0;font-size:13px;line-height:1.5}
-.tcard .foot{margin-top:auto;font-size:12px}
-.strip{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);margin:0 0 16px}
-.strip i{flex:1;height:1px;background:var(--ctx);position:relative}
-.strip i::after{content:"";position:absolute;right:0;top:-2.5px;width:6px;height:6px;border-radius:50%;background:var(--ctx)}
+/* ---------------------------------------------------------------- matriz */
+.mxwrap{display:none}
+.mxm{display:block}
+.chips{display:flex;gap:6px;overflow-x:auto;margin:0 -2px 4px;padding:2px 2px 10px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
+  font:inherit;font-size:12px;font-weight:560;letter-spacing:-.01em;min-height:40px;padding:10px 11px;
+  border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .12s ease}
+.chip:active{transform:scale(.97)}
+.chip[aria-selected="true"]{background:var(--btn-fill);color:var(--on-btn);border-color:transparent}
+.feats{list-style:none;margin:2px 0 0;padding:0}
+.feats li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:9px;align-items:start;
+  padding:9px 0;border-bottom:1px solid var(--line-2);font-size:13.5px;line-height:1.45}
+.feats li:last-child{border-bottom:0}
+.feats .mk{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:11px;line-height:1;margin-top:1px}
+.feats li.on .mk{background:var(--accent-soft);color:var(--accent)}
+.feats li.off{color:var(--ink-2)}
+.feats li.off .mk{background:var(--track);color:var(--ink-3)}
+.feats li.val .mk{background:var(--track);color:var(--ink-2);font-family:var(--mono);font-size:9.5px}
+.feats em{font-style:normal;color:var(--ink-2);font-size:12px;display:block}
+.mplan[hidden]{display:none}
+
+/* ---------------------------------------------------------------- transicao */
+.strip{display:flex;flex-wrap:wrap;gap:5px 9px;align-items:center;margin:0 0 14px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;color:var(--ink-2)}
+.strip i{display:none;flex:1;height:1px;background:var(--line);position:relative}
+.strip i::after{content:"";position:absolute;right:0;top:-2px;width:5px;height:5px;
+  border-radius:50%;background:var(--ink-3)}
 .strip .now{color:var(--accent);font-weight:700}
+.tl{display:grid;grid-template-columns:1fr;gap:10px}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:15px;display:flex;flex-direction:column;gap:7px;box-shadow:var(--shadow)}
+.tcard.hot{border-color:rgba(28,107,88,.45);box-shadow:0 0 0 1px rgba(28,107,88,.12),var(--shadow)}
+.tcard .t{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.tcard h3{margin:0;font-size:16.5px;line-height:1.25;letter-spacing:-.018em;font-weight:650;
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tcard .ts{font-family:var(--mono);font-size:10.5px;color:var(--ink-2);flex:0 0 auto}
+.tcard .q{margin:2px 0 0;font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-2)}
+.tcard p{margin:0;font-size:13px;line-height:1.5}
+.tcard .foot{margin-top:auto;padding-top:4px}
+.tcard .foot a{font-size:12.5px;font-weight:560}
+.tlink{display:inline-flex;align-items:center;gap:5px;min-height:40px}
 
-/* ---------- regras ---------- */
-.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.rule{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
-.rule h3{margin:0 0 6px;font-size:14px;font-weight:600;display:flex;gap:8px;align-items:baseline}
-.rule h3 span{font-family:var(--mono);font-size:10.5px;color:var(--accent);letter-spacing:.08em}
-.rule p{margin:0;font-size:13px;line-height:1.55;color:#3C4743}
+/* ---------------------------------------------------------------- regras */
+.rules{display:grid;grid-template-columns:1fr;gap:10px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:15px 16px;box-shadow:var(--shadow)}
+.rule h3{margin:0 0 6px;font-size:14px;line-height:1.3;font-weight:640;
+  display:flex;gap:8px;align-items:baseline;letter-spacing:-.01em}
+.rule h3 span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);
+  font-weight:500}
+.rule p{margin:0;font-size:13px;line-height:1.55;color:var(--ink-2)}
 .rule p b{color:var(--ink)}
 
-/* ---------- otavio ---------- */
-.two{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;align-items:start}
-.area{display:grid;grid-template-columns:150px 1fr 46px;gap:10px;align-items:center;padding:7px 0}
-.area .an{font-size:12.5px}
-.atrack{height:14px;background:#F0EDE4;border-radius:4px;overflow:hidden}
-.afill{height:100%;background:var(--ctx);border-radius:4px}
-.afill.bad{background:var(--neg)}
-.area .av{font-family:var(--mono);font-size:12px;text-align:right}
-.area .d{grid-column:1/-1;font-size:11px;color:var(--muted);margin-top:-4px}
-.delta{font-family:var(--mono);font-size:10.5px;padding:1px 5px;border-radius:4px;background:#F0EDE4;color:var(--muted)}
-.delta.up{background:var(--accent-2);color:var(--accent)}
-.delta.zero{background:#F7E6E3;color:var(--neg)}
-.big{font-family:"Iowan Old Style",Georgia,serif;font-size:38px;line-height:1;letter-spacing:-.02em;margin:2px 0 2px}
-.big small{font-size:15px;color:var(--muted);font-family:inherit}
-.steps{counter-reset:s;list-style:none;padding:0;margin:12px 0 0}
-.steps li{counter-increment:s;position:relative;padding-left:26px;font-size:13px;line-height:1.5;margin-bottom:9px}
-.steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;
-  background:var(--navy);color:#fff;font-family:var(--mono);font-size:10.5px;display:flex;align-items:center;justify-content:center}
-.cost{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
-.crow{display:grid;grid-template-columns:92px 1fr 82px;gap:10px;align-items:center;padding:4px 0;font-size:12px}
-.crow .ct{height:12px;background:#F0EDE4;border-radius:3px;overflow:hidden}
-.crow .cf{height:100%;background:var(--ctx)}
+/* ---------------------------------------------------------------- otavio */
+.two{display:grid;grid-template-columns:1fr;gap:10px;align-items:start}
+.big{margin:2px 0;font-size:clamp(38px,11vw,44px);line-height:.98;letter-spacing:-.04em;
+  font-weight:690;font-variant-numeric:tabular-nums}
+.big small{font-size:15px;color:var(--ink-2);font-weight:520;letter-spacing:0}
+.area{display:grid;grid-template-columns:88px minmax(0,1fr) 52px;gap:9px;align-items:center;
+  padding:8px 0}
+.area .an{font-size:12px;line-height:1.3;color:var(--ink)}
+.atrack{height:9px;background:var(--track);border-radius:5px;overflow:hidden}
+.afill{height:100%;width:100%;border-radius:5px;background:var(--fill);transform-origin:0 50%;
+  transform:scaleX(var(--w,.5));transition:transform .62s cubic-bezier(.32,.72,0,1)}
+.afill.bad{background:var(--accent)}
+.area .av{font-family:var(--mono);font-size:11.5px;text-align:right;font-variant-numeric:tabular-nums}
+.area .d{grid-column:1/-1;margin-top:-2px;font-size:10.5px;color:var(--ink-2)}
+.delta{font-family:var(--mono);font-size:10px;padding:1px 5px;border-radius:4px;
+  background:var(--track);color:var(--ink-2)}
+.delta.up{background:var(--accent-soft);color:var(--accent)}
+.delta.zero{background:rgba(168,52,42,.12);color:#A8342A}
+:root[data-theme="dark"] .delta.zero{background:rgba(255,120,105,.16);color:#FF9A8C}
+.steps{counter-reset:s;list-style:none;padding:0;margin:10px 0 0}
+.steps li{counter-increment:s;position:relative;padding-left:27px;font-size:13px;line-height:1.5;
+  margin-bottom:10px;color:var(--ink-2)}
+.steps li b{color:var(--ink)}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:19px;height:19px;
+  border-radius:50%;background:var(--btn-fill);color:#fff;font-family:var(--mono);font-size:10px;
+  display:flex;align-items:center;justify-content:center}
+.steps li:last-child{margin-bottom:0}
+.cost{margin-top:14px;border-top:1px solid var(--line-2);padding-top:12px}
+.crow{display:grid;grid-template-columns:64px minmax(0,1fr) 74px;gap:9px;align-items:center;
+  padding:5px 0;font-size:12px}
+.crow .ct{height:7px;background:var(--track);border-radius:4px;overflow:hidden}
+.crow .cf{display:block;height:100%;background:var(--fill);border-radius:4px;
+  transform-origin:0 50%;transform:scaleX(var(--w,.5));
+  transition:transform .62s cubic-bezier(.32,.72,0,1)}
 .crow.lead .cf{background:var(--accent)}
-.crow .cv{font-family:var(--mono);text-align:right;color:var(--muted)}
-.crow.lead .cv{color:var(--accent);font-weight:700}
-.disclaimer{font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+.crow .cv{font-family:var(--mono);text-align:right;color:var(--ink-2);
+  font-variant-numeric:tabular-nums;font-size:11.5px}
+.crow.lead .cv{color:var(--accent);font-weight:640}
+.disclaimer{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line-2);
+  font-size:11.5px;line-height:1.55;color:var(--ink-2)}
+.disclaimer b{color:var(--ink)}
 
-/* ---------- links / footer ---------- */
-.links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.lk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;font-size:13px}
-.lk b{display:block;font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:400}
-.lk .tel{font-family:var(--mono);font-size:15px;color:var(--ink)}
-.vids{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:12px;font-size:12.5px}
-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.6;overflow-wrap:anywhere}
+/* ---------------------------------------------------------------- contato */
+.links{display:grid;grid-template-columns:1fr;gap:10px}
+.lk{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:13px 15px;font-size:13px;box-shadow:var(--shadow);overflow-wrap:anywhere}
+.lk b{display:block;margin-bottom:5px;font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.lk a,.lk .tel{display:inline-flex;align-items:center;min-height:40px;font-size:13.5px}
+.lk .tel{font-family:var(--mono);color:var(--ink);font-size:15px;letter-spacing:-.01em}
+.vids{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px;font-size:12.5px}
+.vids a{display:inline-flex;align-items:center;min-height:40px}
+footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:11.5px;line-height:1.6;color:var(--ink-2);overflow-wrap:anywhere}
+footer b{color:var(--ink);font-weight:620}
 footer i{font-style:italic}
-.lk{overflow-wrap:anywhere}
-footer b{color:#3C4743;font-weight:600}
 
-@media (max-width:1000px){
-  .kpis{grid-template-columns:repeat(3,1fr)}
-  .tl{grid-template-columns:repeat(2,1fr)}
-  .prow{grid-template-columns:140px 1fr}
-  .padd{grid-column:1/-1;padding-left:0}
-  .two{grid-template-columns:1fr}
-  .links{grid-template-columns:1fr 1fr}
+/* ---------------------------------------------------------------- tabbar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;gap:2px;
+  padding:5px 6px calc(5px + env(safe-area-inset-bottom));
+  background:var(--chrome);-webkit-backdrop-filter:blur(24px) saturate(180%);
+  backdrop-filter:blur(24px) saturate(180%);border-top:.5px solid var(--line);
+  overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabbar::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;min-width:54px;display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:6px 3px;border-radius:12px;color:var(--ink-2);text-decoration:none;
+  font-size:10px;line-height:1.2;font-weight:540;letter-spacing:0;
+  -webkit-tap-highlight-color:transparent;transition:color .18s ease,background .18s ease}
+.tab:hover{text-decoration:none}
+.tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round}
+.tab.on{color:var(--accent);background:var(--accent-soft)}
+
+/* ---------------------------------------------------------------- >=700 */
+@media (min-width:700px){
+  .hero{padding:34px 24px 36px;border-radius:0 0 30px 30px}
+  .wrap{padding:0 24px 52px}
+  .sh .hint{display:block;margin-left:auto;font-size:12.5px;color:var(--ink-2)}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kpi:nth-child(5){grid-column:auto;min-height:100px}
+  .rules{grid-template-columns:1fr 1fr}
+  .links{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tl{grid-template-columns:1fr 1fr}
+  .strip i{display:block}
+  .crow{grid-template-columns:84px minmax(0,1fr) 84px}
+  .area{grid-template-columns:120px minmax(0,1fr) 56px}
 }
-@media (max-width:680px){
-  .wrap{padding:0 16px 40px}
-  .topbar .in{padding:8px 16px;gap:10px}
-  .shell .in{padding:0 16px}
-  h1{font-size:30px}
-  .kpis{grid-template-columns:1fr 1fr}
-  .kpi{min-height:0;padding:12px}
-  .kpi .v{font-size:24px}
-  .tl,.rules,.links{grid-template-columns:1fr}
-  .prow{grid-template-columns:1fr;gap:8px}
-  .area{grid-template-columns:110px 1fr 40px}
-  .crow{grid-template-columns:74px 1fr 68px}
-  .sh .hint{display:none}
-  h1{max-width:none}
+
+/* ---------------------------------------------------------------- >=900 */
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .bar-in{height:58px;padding:0 24px;gap:14px}
+  .nav{display:flex;flex:1 1 auto;min-width:0;gap:2px;overflow-x:auto;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{color:var(--ink-2);font-size:12.5px;font-weight:540;letter-spacing:-.005em;
+    padding:7px 11px;border-radius:9px;white-space:nowrap;transition:background .18s,color .18s}
+  .nav a:hover{background:var(--surface-2);color:var(--ink);text-decoration:none}
+  .nav a.on{background:var(--btn-fill);color:var(--on-btn)}
+  .tabbar{display:none}
+  .hero{padding:44px 24px 46px;margin-top:0}
+  .hero h1{max-width:20ch}
+  .lede{font-size:16px}
+  .kpis{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+  .tl{grid-template-columns:repeat(4,1fr)}
+  .links{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .two{grid-template-columns:1.05fr .95fr;gap:12px}
+  /* escada em 3 colunas */
+  .prow{display:grid;grid-template-columns:190px minmax(0,1fr) 260px;gap:18px;
+    align-items:center;padding:15px 4px}
+  .prow.hot{padding-inline:14px;margin-inline:-14px}
+  .phead{display:block}
+  .pprice{text-align:left;margin-top:6px}
+  .pprice b{display:inline;font-size:19px}
+  .pprice span{font-size:11.5px}
+  .track{margin:0}
+  .padd{font-size:12.5px}
+  /* matriz em tabela */
+  .mxm{display:none}
+  .mxwrap{display:block;overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);
+    background:var(--surface);box-shadow:var(--shadow)}
+  .mx{min-width:680px;display:grid;grid-template-columns:minmax(230px,1.7fr) repeat(5,1fr)}
+  .mx>div{padding:10px 12px;border-bottom:1px solid var(--line-2);font-size:12.5px;
+    line-height:1.4}
+  .mx .hd{font-size:11.5px;font-weight:640;letter-spacing:-.005em;
+    border-bottom:1px solid var(--line);background:var(--surface-2)}
+  .mx .hd.hot{color:var(--accent)}
+  .mx .rh{color:var(--ink);border-right:1px solid var(--line-2)}
+  .mx .c{text-align:center;color:var(--ink-3);font-family:var(--mono)}
+  .mx .c.y{color:var(--accent);font-weight:700}
+  .mx .c.x{color:var(--ink-3)}
+  .mx .c.hotcol{background:var(--accent-soft)}
+  .mx .rowend{border-bottom:0}
 }
+
+/* ---------------------------------------------------------------- motion */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.001s!important;animation-duration:.001s!important}
+}
+@media (prefers-reduced-transparency:reduce){
+  .bar,.tabbar{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media (prefers-contrast:more){
+  :root{--line:rgba(17,30,27,.34);--line-2:rgba(17,30,27,.2);--ink-2:#3D4844}
+  :root[data-theme="dark"]{--line:rgba(255,255,255,.4);--line-2:rgba(255,255,255,.26);--ink-2:#D2DBD6}
+  .card,.kpi,.tcard,.rule,.lk,.mxwrap{border-width:1.5px}
+}
+
+/* ---------------------------------------------------------------- print */
 @media print{
-  body{background:#fff}
-  .topbar,.toggle,.btn{display:none!important}
-  .shell{background:#fff;color:#000;border-bottom:2px solid #000;padding:0 0 14px}
-  .shell p,.shell .meta,.eyebrow{color:#333}
-  .card,.tcard,.rule,.lk{break-inside:avoid;border-color:#bbb}
-  section{margin-top:22px}
-  a{color:#000;border:0}
+  :root{--bg:#fff;--surface:#fff;--ink:#000;--ink-2:#333;--ink-3:#444;
+    --line:#bbb;--line-2:#ddd;--track:#e5e5e5;--fill:#999;--accent:#0c4a3c;
+    --accent-soft:#f2f6f4;--shadow:none}
+  body{background:#fff;padding:0}
+  .bar,.tabbar,.seg,.chips,.skip{display:none!important}
+  .hero{background:#fff;color:#000;border-bottom:2px solid #000;border-radius:0;padding:0 0 14px}
+  .hero::after{display:none}
+  .hero h1,.lede,.eyebrow,.hero-meta li{color:#000}
+  .hero-meta li{border-color:#999}
+  .prow.hot{background:#fff;margin-inline:0;padding-inline:0}
+  .fill,.afill,.cf{transition:none}
+  .card,.tcard,.rule,.lk,.kpi,.mxwrap{break-inside:avoid;box-shadow:none}
+  section{margin-top:20px;break-inside:avoid}
+  .mxm{display:none}
+  .mxwrap{display:block;overflow:visible}
+  .mx{min-width:0;grid-template-columns:minmax(180px,1.6fr) repeat(5,1fr)}
+  a{color:#000;text-decoration:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9px;color:#555}
 }
 </style>
 </head>
 <body>
 
-<div class="topbar"><div class="in">
-  <div class="brand">Academia FB <span>· 2027</span></div>
-  <nav class="nav">
-    <a href="#visao">Visão</a><a href="#planos">Planos</a><a href="#matriz">Matriz</a>
-    <a href="#transicao">Transição</a><a href="#regras">Regras</a><a href="#otavio">Otávio</a><a href="#contato">Contatos</a>
-  </nav>
-  <button class="btn" id="print" title="Imprimir / salvar em PDF">Imprimir</button>
-</div></div>
+<a class="skip" href="#planos">Ir para os planos</a>
 
-<header class="shell" id="visao"><div class="in">
-  <div class="eyebrow">Ciclo 2027 · live de 18/11/2026 · 38 min 50 s</div>
-  <h1>Planos, preços e a ponte até fevereiro</h1>
-  <p>Cinco modalidades cumulativas de R$ 200 a R$ 1.500, quatro estratégias de transição para nov/jan e uma regra dura: aula ao vivo expira em 24 horas. Abaixo, o que cada plano compra de fato e onde o perfil de 127 acertos entra.</p>
-  <div class="meta"><span>Fernando Beltrão + Artur</span><span>8º ano → Ex-3º</span><span>fonte: nota do vault (live 18/11/2026)</span></div>
-</div></header>
+<header class="bar" id="bar">
+  <div class="bar-in">
+    <a class="brand" href="#visao">Academia FB<span>· 2027</span></a>
+    <nav class="nav" aria-label="Seções do painel">
+      <a href="#visao">Visão</a>
+      <a href="#planos">Planos</a>
+      <a href="#matriz">Matriz</a>
+      <a href="#transicao">Transição</a>
+      <a href="#regras">Regras</a>
+      <a href="#otavio">Otávio</a>
+      <a href="#contato">Contatos</a>
+    </nav>
+    <div class="acts">
+      <button class="ic" id="theme" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false" title="Tema">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.6 8.6 0 0 1 9.6 3.5 8.6 8.6 0 1 0 20.5 14.4Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5"/></svg>
+      </button>
+      <button class="ic" id="print" type="button" aria-label="Imprimir ou salvar em PDF" title="Imprimir / PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3.8h10V9"/><rect x="3.8" y="9" width="16.4" height="7.4" rx="2"/><path d="M7 13.2h10V20H7z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-<div class="wrap">
+<header class="hero" id="visao">
+  <div class="hero-in">
+    <p class="eyebrow">Ciclo 2027 · live de 18/11/2026 · 38 min 50 s</p>
+    <h1>Planos, preços e a ponte até fevereiro</h1>
+    <p class="lede">Cinco modalidades cumulativas de R$ 200 a R$ 1.500, quatro estratégias de transição para nov/jan e uma regra dura: aula ao vivo expira em 24 horas. Abaixo, o que cada plano compra de fato e onde o perfil de 127 acertos entra.</p>
+    <ul class="hero-meta">
+      <li>Fernando Beltrão + Artur</li>
+      <li>8º ano → Ex-3º</li>
+      <li>fonte: nota do vault (live 18/11/2026)</li>
+    </ul>
+  </div>
+</header>
 
-  <section class="kpis" style="margin-top:0">
-    <div class="card kpi"><div class="l">Mensalidade de entrada</div><div class="v">R$ 200</div>
-      <div class="n">Flash · <b>R$ 0</b> para escola pública (só matrícula)</div></div>
-    <div class="card kpi"><div class="l">Plano da maioria</div><div class="v">R$ 1.000</div>
-      <div class="n">Top · veterano ativo tem valor congelado</div></div>
-    <div class="card kpi"><div class="l">Estratégias de transição</div><div class="v">4</div>
-      <div class="n">nov/2026 → jan/2027 · início imediato</div></div>
-    <div class="card kpi alt"><div class="l">Validade da aula ao vivo</div><div class="v">24 h</div>
-      <div class="n">módulo e tarefa da semana caem em <b>7 dias</b></div></div>
-    <div class="card kpi"><div class="l">Provas no ano (1º dia)</div><div class="v">200+</div>
-      <div class="n">ímpar: Linguagens · par: Humanas</div></div>
+<main class="wrap">
+
+  <section class="kpis" aria-label="Números do ciclo">
+    <div class="card kpi"><p class="l">Mensalidade de entrada</p><p class="v">R$ 200</p>
+      <p class="n">Flash · <b>R$ 0</b> para escola pública (só matrícula)</p></div>
+    <div class="card kpi"><p class="l">Plano da maioria</p><p class="v">R$ 1.000</p>
+      <p class="n">Top · veterano ativo tem valor congelado</p></div>
+    <div class="card kpi"><p class="l">Estratégias de transição</p><p class="v">4</p>
+      <p class="n">nov/2026 → jan/2027 · início imediato</p></div>
+    <div class="card kpi alt"><p class="l">Validade da aula ao vivo</p><p class="v">24 h</p>
+      <p class="n">módulo e tarefa da semana caem em <b>7 dias</b></p></div>
+    <div class="card kpi"><p class="l">Provas no ano (1º dia)</p><p class="v">200+</p>
+      <p class="n">ímpar: Linguagens · par: Humanas</p></div>
   </section>
 
   <section id="planos">
     <div class="sh"><span class="num">01</span><h2>Escada de planos</h2>
       <span class="hint">cada nível inclui tudo do anterior</span></div>
     <div class="card">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px 12px;flex-wrap:wrap;margin-bottom:6px">
-        <div style="font-size:12px;color:var(--muted)">Mensalidade por modalidade · barra proporcional a R$ 1.500</div>
-        <div class="toggle"><button id="m-mes" class="on">mês</button><button id="m-ano">ano (12×)</button></div>
+      <div class="ladder-top">
+        <p>Mensalidade por modalidade · barra proporcional a R$ 1.500</p>
+        <div class="seg" id="seg-mes" role="tablist" aria-label="Ver por mês ou por ano">
+          <button type="button" role="tab" data-modo="mes" aria-selected="true">mês</button>
+          <button type="button" role="tab" data-modo="ano" aria-selected="false">ano (12×)</button>
+        </div>
       </div>
       <div class="ladder">
-<div class="prow" data-preco="200"><div><span class="pname">Flash</span><span class="ptag">entrada</span><div class="pprice"><b class="pval">R$ 200</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:13.3%"></div></div><div class="padd">Salas por série · 1 matéria por dia · aula curta + guia visual<em>Sem simulados inéditos e sem plantão ao vivo</em></div></div>
-<div class="prow" data-preco="500"><div><span class="pname">Estratégica</span><span class="ptag">+ foco no 2º dia</span><div class="pprice"><b class="pval">R$ 500</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:33.3%"></div></div><div class="padd">TutorMundi ao vivo · Semanaula por série · simulados semanais</div></div>
-<div class="prow" data-preco="800"><div><span class="pname">Especial</span><span class="ptag">+ pré-vestibular completo</span><div class="pprice"><b class="pval">R$ 800</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:53.3%"></div></div><div class="padd">TrilhaEdu · 1 Gestor de Aprendizagem incluso<em>Não inclui as 3 exclusividades da Top</em></div></div>
-<div class="prow hot" data-preco="1000"><div><span class="pname">Top<span class="badge">o plano da maioria</span></span><span class="ptag">o plano da maioria</span><div class="pprice"><b class="pval">R$ 1.000</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:66.7%"></div></div><div class="padd">Mentoria Geral no WhatsApp · Roteiro Adaptado · Provas sob demanda<em>Veterano ativo mantém o valor antigo congelado</em></div></div>
-<div class="prow" data-preco="1500"><div><span class="pname">Super</span><span class="ptag">+ gestores modulares</span><div class="pprice"><b class="pval">R$ 1.500</b> <span class="punit">/mês</span></div></div><div class="track"><div class="fill" style="width:100.0%"></div></div><div class="padd">Tudo da Top · 1 gestor por R$ 500/mês · 2º e 3º gestor com aval do 1º<em>R$ 1.500 já com um gestor contratado</em></div></div>
+<article class="prow" data-preco="200"><div class="phead"><div><h3 class="pname">Flash</h3><p class="ptag">entrada</p></div><p class="pprice"><b class="pval">R$ 200</b><span class="punit">/mês</span></p></div><div class="track"><span class="fill" style="--w:0.133"></span></div><p class="padd">Salas por série · 1 matéria por dia · aula curta + guia visual<span class="pnote">Sem simulados inéditos e sem plantão ao vivo</span></p></article>
+<article class="prow" data-preco="500"><div class="phead"><div><h3 class="pname">Estratégica</h3><p class="ptag">+ foco no 2º dia</p></div><p class="pprice"><b class="pval">R$ 500</b><span class="punit">/mês</span></p></div><div class="track"><span class="fill" style="--w:0.333"></span></div><p class="padd">TutorMundi ao vivo · Semanaula por série · simulados semanais</p></article>
+<article class="prow" data-preco="800"><div class="phead"><div><h3 class="pname">Especial</h3><p class="ptag">+ pré-vestibular completo</p></div><p class="pprice"><b class="pval">R$ 800</b><span class="punit">/mês</span></p></div><div class="track"><span class="fill" style="--w:0.533"></span></div><p class="padd">TrilhaEdu · 1 Gestor de Aprendizagem incluso<span class="pnote">Não inclui as 3 exclusividades da Top</span></p></article>
+<article class="prow hot" data-preco="1000"><div class="phead"><div><h3 class="pname">Top</h3><p class="ptag">o plano da maioria</p></div><p class="pprice"><b class="pval">R$ 1.000</b><span class="punit">/mês</span></p></div><div class="track"><span class="fill" style="--w:0.667"></span></div><p class="padd">Mentoria Geral no WhatsApp · Roteiro Adaptado · Provas sob demanda<span class="pnote">Veterano ativo mantém o valor antigo congelado</span></p></article>
+<article class="prow" data-preco="1500"><div class="phead"><div><h3 class="pname">Super</h3><p class="ptag">+ gestores modulares</p></div><p class="pprice"><b class="pval">R$ 1.500</b><span class="punit">/mês</span></p></div><div class="track"><span class="fill" style="--w:1.000"></span></div><p class="padd">Tudo da Top · 1 gestor por R$ 500/mês · 2º e 3º gestor com aval do 1º<span class="pnote">R$ 1.500 já com um gestor contratado</span></p></article>
       </div>
       <div class="legend"><span id="ladder-note">mensalidade cheia · matrícula não divulgada na live</span>
         <span>·</span><span>valores da live de 18/11/2026</span></div>
@@ -252,9 +478,12 @@ footer b{color:#3C4743;font-weight:600}
     <div class="sh"><span class="num">02</span><h2>O que cada plano compra</h2>
       <span class="hint">✓ incluso · — não incluso</span></div>
     <div class="mxwrap"><div class="mx">
-<div class="hd rh">Recurso</div><div class="hd">Flash</div><div class="hd">Estratégica</div><div class="hd">Especial</div><div class="hd hot">Top</div><div class="hd">Super</div><div class="rh">Salas exclusivas por série (8º → Ex-3º)</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Cronograma anual: 1 matéria por dia</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Foco intensivo nas 4 matérias do 2º dia</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">TutorMundi — plantão com monitor ao vivo</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Semanaula — aulas ao vivo por série</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Simulados inéditos semanais</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Pré-vestibular digital completo</div><div class="c x">—</div><div class="c x">—</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">TrilhaEdu — micro-habilidades</div><div class="c x">—</div><div class="c x">—</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Gestor de Aprendizagem</div><div class="c" style="color:var(--ink);font-family:inherit">—</div><div class="c" style="color:var(--ink);font-family:inherit">—</div><div class="c" style="color:var(--ink);font-family:inherit">1 incluso</div><div class="c hotcol" style="color:var(--ink);font-family:inherit">—</div><div class="c" style="color:var(--ink);font-family:inherit">1+ (R$ 500 cada)</div><div class="rh">Mentoria Geral — WhatsApp direto</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Roteiro Adaptado (Farol/Retrovisor)</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Provas sob demanda ilimitadas</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div>
+<div class="hd rh">Recurso</div><div class="hd">Flash</div><div class="hd">Estratégica</div><div class="hd">Especial</div><div class="hd hot">Top</div><div class="hd">Super</div><div class="rh">Salas exclusivas por série (8º → Ex-3º)</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Cronograma anual: 1 matéria por dia</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Foco intensivo nas 4 matérias do 2º dia</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">TutorMundi — plantão com monitor ao vivo</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Semanaula — aulas ao vivo por série</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Simulados inéditos semanais</div><div class="c x">—</div><div class="c y">✓</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Pré-vestibular digital completo</div><div class="c x">—</div><div class="c x">—</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">TrilhaEdu — micro-habilidades</div><div class="c x">—</div><div class="c x">—</div><div class="c y">✓</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Gestor de Aprendizagem</div><div class="c x">—</div><div class="c x">—</div><div class="c" style="font-family:inherit;color:var(--ink)">1 incluso</div><div class="c x hotcol">—</div><div class="c" style="font-family:inherit;color:var(--ink)">1+ (R$ 500 cada)</div><div class="rh">Mentoria Geral — WhatsApp direto</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Roteiro Adaptado (Farol/Retrovisor)</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div><div class="rh">Provas sob demanda ilimitadas</div><div class="c x">—</div><div class="c x">—</div><div class="c x">—</div><div class="c y hotcol">✓</div><div class="c y">✓</div>
     </div></div>
-    <div class="mxnote">A expiração de 24 h (aula) e 7 dias (módulo) é regra metodológica da casa e vale em todas as modalidades — não é um recurso de plano. Salas separadas por série vão do 8º ano ao Ex-3º.</div>
+    <div class="mxm card">
+<div class="chips" role="tablist" aria-label="Escolher plano"><button class="chip" type="button" role="tab" data-plan="Flash" aria-selected="false">Flash</button><button class="chip" type="button" role="tab" data-plan="Estratégica" aria-selected="false">Estratégica</button><button class="chip" type="button" role="tab" data-plan="Especial" aria-selected="false">Especial</button><button class="chip" type="button" role="tab" data-plan="Top" aria-selected="true">Top</button><button class="chip" type="button" role="tab" data-plan="Super" aria-selected="false">Super</button></div><div class="mplans"><div class="mplan" role="tabpanel" data-plan="Flash" aria-label="Flash" hidden><ul class="feats"><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Salas exclusivas por série (8º → Ex-3º)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Cronograma anual: 1 matéria por dia</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Foco intensivo nas 4 matérias do 2º dia</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>TutorMundi — plantão com monitor ao vivo</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Semanaula — aulas ao vivo por série</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Simulados inéditos semanais</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Pré-vestibular digital completo</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>TrilhaEdu — micro-habilidades</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Gestor de Aprendizagem</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Mentoria Geral — WhatsApp direto</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Roteiro Adaptado (Farol/Retrovisor)</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Provas sob demanda ilimitadas</span></li></ul></div><div class="mplan" role="tabpanel" data-plan="Estratégica" aria-label="Estratégica" hidden><ul class="feats"><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Salas exclusivas por série (8º → Ex-3º)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Cronograma anual: 1 matéria por dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Foco intensivo nas 4 matérias do 2º dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TutorMundi — plantão com monitor ao vivo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Semanaula — aulas ao vivo por série</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Simulados inéditos semanais</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Pré-vestibular digital completo</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>TrilhaEdu — micro-habilidades</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Gestor de Aprendizagem</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Mentoria Geral — WhatsApp direto</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Roteiro Adaptado (Farol/Retrovisor)</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Provas sob demanda ilimitadas</span></li></ul></div><div class="mplan" role="tabpanel" data-plan="Especial" aria-label="Especial" hidden><ul class="feats"><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Salas exclusivas por série (8º → Ex-3º)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Cronograma anual: 1 matéria por dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Foco intensivo nas 4 matérias do 2º dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TutorMundi — plantão com monitor ao vivo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Semanaula — aulas ao vivo por série</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Simulados inéditos semanais</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Pré-vestibular digital completo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TrilhaEdu — micro-habilidades</span></li><li class="val"><span class="mk" aria-hidden="true">•</span><span>Gestor de Aprendizagem<em>1 incluso</em></span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Mentoria Geral — WhatsApp direto</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Roteiro Adaptado (Farol/Retrovisor)</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Provas sob demanda ilimitadas</span></li></ul></div><div class="mplan" role="tabpanel" data-plan="Top" aria-label="Top"><ul class="feats"><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Salas exclusivas por série (8º → Ex-3º)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Cronograma anual: 1 matéria por dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Foco intensivo nas 4 matérias do 2º dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TutorMundi — plantão com monitor ao vivo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Semanaula — aulas ao vivo por série</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Simulados inéditos semanais</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Pré-vestibular digital completo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TrilhaEdu — micro-habilidades</span></li><li class="off"><span class="mk" aria-hidden="true">–</span><span>Gestor de Aprendizagem</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Mentoria Geral — WhatsApp direto</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Roteiro Adaptado (Farol/Retrovisor)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Provas sob demanda ilimitadas</span></li></ul></div><div class="mplan" role="tabpanel" data-plan="Super" aria-label="Super" hidden><ul class="feats"><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Salas exclusivas por série (8º → Ex-3º)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Cronograma anual: 1 matéria por dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Foco intensivo nas 4 matérias do 2º dia</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TutorMundi — plantão com monitor ao vivo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Semanaula — aulas ao vivo por série</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Simulados inéditos semanais</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Pré-vestibular digital completo</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>TrilhaEdu — micro-habilidades</span></li><li class="val"><span class="mk" aria-hidden="true">•</span><span>Gestor de Aprendizagem<em>1+ (R$ 500 cada)</em></span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Mentoria Geral — WhatsApp direto</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Roteiro Adaptado (Farol/Retrovisor)</span></li><li class="on"><span class="mk" aria-hidden="true">✓</span><span>Provas sob demanda ilimitadas</span></li></ul></div></div>
+    </div>
+    <p class="note">A expiração de 24 h (aula) e 7 dias (módulo) é regra metodológica da casa e vale em todas as modalidades — não é um recurso de plano. Salas separadas por série vão do 8º ano ao Ex-3º.</p>
   </section>
 
   <section id="transicao">
@@ -262,12 +491,12 @@ footer b{color:#3C4743;font-weight:600}
       <span class="hint">30 min a 2 h por dia, conforme o caso</span></div>
     <div class="strip"><span class="now">pós-ENEM</span><i></i><span>SSA/UPE</span><i></i><span>carnaval</span><i></i><span>1º de fevereiro · ano letivo</span></div>
     <div class="tl">
-<div class="tcard"><div class="t"><h3>TrilhaEdu</h3><span class="ts">15:54</span></div><div class="q">para quem</div><p>Recuperar Matemática básica, ou teoria que não vira acerto em Física, Química e Matemática.</p><div class="q">como funciona</div><p>Trilhas de micro-habilidades, do pré-requisito para cima.</p><div class="foot"><a href="https://youtu.be/13v3fFfTgZE">vídeo de ~3 min →</a></div></div>
-<div class="tcard"><div class="t"><h3>Farol</h3><span class="ts">16:34</span></div><div class="q">para quem</div><p>Alto desempenho do 8º/9º ao 2º ano — medalhista ou sem pendência escolar.</p><div class="q">como funciona</div><p>Antecipar conteúdo da série seguinte. Quem vai ao 1º ano: Física.</p><div class="foot"><a href="https://youtu.be/btMQffBme2g">vídeo de ~3 min →</a></div></div>
-<div class="tcard"><div class="t"><h3>Retrovisor</h3><span class="ts">17:14</span></div><div class="q">para quem</div><p>Avançou de série com lacuna específica (ex.: Química ou Biologia do ano anterior).</p><div class="q">como funciona</div><p>Cronograma cirúrgico de revisão da lacuna antes de fevereiro.</p><div class="foot"><a href="https://youtu.be/lmr8uzArYgY">vídeo de ~3 min →</a></div></div>
-<div class="tcard hot"><div class="t"><h3>Estratégia das Provas<span class="badge">perfil do Otávio (127)</span></h3><span class="ts">17:51</span></div><div class="q">para quem</div><p>Concluiu o 3º ano ou Ex-3º com 100+ acertos e está saturado do formato ENEM.</p><div class="q">como funciona</div><p>1 a 3 provas por semana em escala 3x4, 1–2 h/dia. Vunesp (130–150 acertos) ou Fuvest + Unicamp + Unesp (160+).</p><div class="foot"><a href="https://youtu.be/AjUyD9NtjD4">vídeo de ~3 min →</a></div></div>
+<article class="tcard"><div class="t"><h3>TrilhaEdu</h3><span class="ts">15:54</span></div><p class="q">para quem</p><p>Recuperar Matemática básica, ou teoria que não vira acerto em Física, Química e Matemática.</p><p class="q">como funciona</p><p>Trilhas de micro-habilidades, do pré-requisito para cima.</p><p class="foot"><a class="tlink" href="https://youtu.be/13v3fFfTgZE">vídeo de ~3 min →</a></p></article>
+<article class="tcard"><div class="t"><h3>Farol</h3><span class="ts">16:34</span></div><p class="q">para quem</p><p>Alto desempenho do 8º/9º ao 2º ano — medalhista ou sem pendência escolar.</p><p class="q">como funciona</p><p>Antecipar conteúdo da série seguinte. Quem vai ao 1º ano: Física.</p><p class="foot"><a class="tlink" href="https://youtu.be/btMQffBme2g">vídeo de ~3 min →</a></p></article>
+<article class="tcard"><div class="t"><h3>Retrovisor</h3><span class="ts">17:14</span></div><p class="q">para quem</p><p>Avançou de série com lacuna específica (ex.: Química ou Biologia do ano anterior).</p><p class="q">como funciona</p><p>Cronograma cirúrgico de revisão da lacuna antes de fevereiro.</p><p class="foot"><a class="tlink" href="https://youtu.be/lmr8uzArYgY">vídeo de ~3 min →</a></p></article>
+<article class="tcard hot"><div class="t"><h3>Estratégia das Provas <span class="badge">perfil do Otávio (127)</span></h3><span class="ts">17:51</span></div><p class="q">para quem</p><p>Concluiu o 3º ano ou Ex-3º com 100+ acertos e está saturado do formato ENEM.</p><p class="q">como funciona</p><p>1 a 3 provas por semana em escala 3x4, 1–2 h/dia. Vunesp (130–150 acertos) ou Fuvest + Unicamp + Unesp (160+).</p><p class="foot"><a class="tlink" href="https://youtu.be/AjUyD9NtjD4">vídeo de ~3 min →</a></p></article>
     </div>
-    <div class="mxnote">Diagnóstico da live: o calendário pernambucano (SSA cedo + ENEM em novembro) abre quase três meses de motor desligado, enquanto candidatos de outros estados seguem em ritmo de segunda fase. As quatro rotas existem para cobrir esse vão — a escolha é pelo tipo de lacuna, não pelo preço.</div>
+    <p class="note">Diagnóstico da live: o calendário pernambucano (SSA cedo + ENEM em novembro) abre quase três meses de motor desligado, enquanto candidatos de outros estados seguem em ritmo de segunda fase. As quatro rotas existem para cobrir esse vão — a escolha é pelo tipo de lacuna, não pelo preço.</p>
   </section>
 
   <section id="regras">
@@ -290,19 +519,19 @@ footer b{color:#3C4743;font-weight:600}
       <span class="hint">cruzamento com o desempenho no ENEM 2026</span></div>
     <div class="two">
       <div class="card">
-        <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Ponto de partida · ENEM 2026</div>
-        <div class="big">127<small>/180</small></div>
-        <div style="font-size:12.5px;color:var(--muted)">70,6% de acerto · média simples projetada <b style="color:var(--ink)">684,5</b> (TRI 2025)</div>
+        <p class="micro">Ponto de partida · ENEM 2026</p>
+        <p class="big">127<small>/180</small></p>
+        <p class="note" style="margin-top:0">70,6% de acerto · média simples projetada <b>684,5</b> (TRI 2025)</p>
         <div style="margin-top:12px">
-<div class="area"><div class="an">Ciências Humanas</div><div class="atrack"><div class="afill" style="width:78%"></div></div><div class="av">35/45</div><div class="d"><span class="delta up">+8 acertos vs 2025</span> · nota TRI ~686</div></div>
-<div class="area"><div class="an">Linguagens</div><div class="atrack"><div class="afill" style="width:82%"></div></div><div class="av">37/45</div><div class="d"><span class="delta up">+1 acertos vs 2025</span> · nota TRI ~652</div></div>
-<div class="area"><div class="an">Ciências da Natureza</div><div class="atrack"><div class="afill bad" style="width:58%"></div></div><div class="av">26/45</div><div class="d"><span class="delta zero">0 acertos vs 2025</span> · nota TRI ~643</div></div>
-<div class="area"><div class="an">Matemática</div><div class="atrack"><div class="afill" style="width:64%"></div></div><div class="av">29/45</div><div class="d"><span class="delta up">+1 acertos vs 2025</span> · nota TRI ~757</div></div>
+<div class="area"><div class="an">Ciências Humanas</div><div class="atrack"><span class="afill" style="--w:0.778"></span></div><div class="av">35/45</div><div class="d"><span class="delta up">+8 acertos vs 2025</span> · nota TRI ~686</div></div>
+<div class="area"><div class="an">Linguagens</div><div class="atrack"><span class="afill" style="--w:0.822"></span></div><div class="av">37/45</div><div class="d"><span class="delta up">+1 acertos vs 2025</span> · nota TRI ~652</div></div>
+<div class="area"><div class="an">Ciências da Natureza</div><div class="atrack"><span class="afill bad" style="--w:0.578"></span></div><div class="av">26/45</div><div class="d"><span class="delta zero">0 acertos vs 2025</span> · nota TRI ~643</div></div>
+<div class="area"><div class="an">Matemática</div><div class="atrack"><span class="afill" style="--w:0.644"></span></div><div class="av">29/45</div><div class="d"><span class="delta up">+1 acertos vs 2025</span> · nota TRI ~757</div></div>
         </div>
-        <div class="disclaimer">Humanas ganhou 8 acertos e mudou de patamar; Natureza repetiu 26/45 — é a área de <b>peso 3 na UFPE e na FPS</b> e a que mais limita o escore final (+3,04 por acerto na média ponderada, contra +0,92 de Humanas).</div>
+        <p class="disclaimer">Humanas ganhou 8 acertos e mudou de patamar; Natureza repetiu 26/45 — é a área de <b>peso 3 na UFPE e na FPS</b> e a que mais limita o escore final (+3,04 por acerto na média ponderada, contra +0,92 de Humanas).</p>
       </div>
       <div class="card">
-        <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Leitura do painel</div>
+        <p class="micro">Leitura do painel</p>
         <ol class="steps">
           <li><b>Transição:</b> 127 acertos caem na faixa <b>121–140</b> da régua da casa → <b>Dose 1 da Vunesp</b> (1 prova/semana + 2 dias de revisão) e Dose 2 se aguentar. Na live de 18/11, a Vunesp é a banca indicada para 130–150 acertos — 127 está no piso dela.</li>
           <li><b>Ano letivo:</b> rotina do 1º dia de 7h às 9h (ímpar Linguagens, par Humanas) + 1 simulado inédito por semana — é o gargalo de velocidade de leitura, 200+ provas no ano.</li>
@@ -310,14 +539,14 @@ footer b{color:#3C4743;font-weight:600}
           <li><b>Qual plano:</b> Top (R$ 1.000) não tem gestor; Especial (R$ 800) tem 1 gestor mas perde Mentoria, Roteiro Adaptado e Provas sob demanda; Super (R$ 1.500) é Top + gestor.</li>
         </ol>
         <div class="cost">
-          <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Custo de 12 meses</div>
-<div class="crow"><span>Flash</span><span class="ct"><span class="cf" style="width:13%"></span></span><span class="cv">R$ 2.400</span></div>
-<div class="crow"><span>Estratégica</span><span class="ct"><span class="cf" style="width:33%"></span></span><span class="cv">R$ 6.000</span></div>
-<div class="crow"><span>Especial</span><span class="ct"><span class="cf" style="width:53%"></span></span><span class="cv">R$ 9.600</span></div>
-<div class="crow lead"><span>Top</span><span class="ct"><span class="cf" style="width:67%"></span></span><span class="cv">R$ 12.000</span></div>
-<div class="crow"><span>Super</span><span class="ct"><span class="cf" style="width:100%"></span></span><span class="cv">R$ 18.000</span></div>
+          <p class="micro" style="margin-bottom:6px">Custo de 12 meses</p>
+<div class="crow"><span>Flash</span><span class="ct"><span class="cf" style="--w:0.133"></span></span><span class="cv">R$ 2.400</span></div>
+<div class="crow"><span>Estratégica</span><span class="ct"><span class="cf" style="--w:0.333"></span></span><span class="cv">R$ 6.000</span></div>
+<div class="crow"><span>Especial</span><span class="ct"><span class="cf" style="--w:0.533"></span></span><span class="cv">R$ 9.600</span></div>
+<div class="crow lead"><span>Top</span><span class="ct"><span class="cf" style="--w:0.667"></span></span><span class="cv">R$ 12.000</span></div>
+<div class="crow"><span>Super</span><span class="ct"><span class="cf" style="--w:1.000"></span></span><span class="cv">R$ 18.000</span></div>
         </div>
-        <div class="disclaimer">Leitura derivada das duas notas do vault, não é recomendação da Academia. Matrícula não foi divulgada; a conta usa 12 mensalidades cheias e ignora reajuste (não há para veterano ativo).</div>
+        <p class="disclaimer">Leitura derivada das duas notas do vault, não é recomendação da Academia. Matrícula não foi divulgada; a conta usa 12 mensalidades cheias e ignora reajuste (não há para veterano ativo).</p>
       </div>
     </div>
   </section>
@@ -328,12 +557,12 @@ footer b{color:#3C4743;font-weight:600}
     <div class="links">
       <div class="lk"><b>Formulário de matrícula</b><a href="https://online.academiafernandinhobeltrao.com.br/online/matriculas2026/">online.academiafernandinhobeltrao.com.br</a></div>
       <div class="lk"><b>Fale com os diretores</b><a href="https://sites.google.com/view/2019comecou/diretores">sites.google.com/view/2019comecou/diretores</a></div>
-      <div class="lk"><b>Telefone / WhatsApp</b><span class="tel">(81) 98763-2674</span></div>
+      <div class="lk"><b>Telefone / WhatsApp</b><a class="tel" href="tel:+5581987632674">(81) 98763-2674</a></div>
     </div>
-    <div class="card" style="margin-top:12px">
-      <div style="font-size:11px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Vídeos de detalhamento (~3 min)</div>
+    <div class="card" style="margin-top:10px">
+      <p class="micro">Vídeos de detalhamento (~3 min)</p>
       <div class="vids"><a href="https://youtu.be/xsAfVK2EItc">Comparando as Academias 2027</a> · <a href="https://youtu.be/n9bwXg81G5M">Flash explicada</a> · <a href="https://youtu.be/KnYciRlx85s">Estratégica explicada</a> · <a href="https://youtu.be/B4BHvGKVels">Top explicada</a> · <a href="https://youtu.be/_n9SliBIIWc">Super explicada</a></div>
-      <div class="mxnote">A modalidade Especial não teve vídeo próprio divulgado na live — só o trecho ao vivo (11:48–12:45). Transição: <a href="https://youtu.be/AjUyD9NtjD4">Estratégia das Provas</a> · <a href="https://youtu.be/lmr8uzArYgY">Retrovisor</a> · <a href="https://youtu.be/btMQffBme2g">Farol</a> · <a href="https://youtu.be/13v3fFfTgZE">TrilhaEdu</a>.</div>
+      <p class="note">A modalidade Especial não teve vídeo próprio divulgado na live — só o trecho ao vivo (11:48–12:45). Transição: <a href="https://youtu.be/AjUyD9NtjD4">Estratégia das Provas</a> · <a href="https://youtu.be/lmr8uzArYgY">Retrovisor</a> · <a href="https://youtu.be/btMQffBme2g">Farol</a> · <a href="https://youtu.be/13v3fFfTgZE">TrilhaEdu</a>.</p>
     </div>
   </section>
 
@@ -341,42 +570,215 @@ footer b{color:#3C4743;font-weight:600}
     <b>Fontes:</b> live "Informações e Matrículas 2027 — Academia Fernandinho Beltrão", 18/11/2026, 38 min 50 s (<a href="https://www.youtube.com/live/3tTPb7-457k">youtube.com/live/3tTPb7-457k</a>) — planos, preços, matriz, transição e regras; live pós-ENEM de 17/11/2026 — régua de acertos, dose de provas e rotina do 1º dia; nota <i>Desempenho ENEM 2025 × 2026 do Otávio</i> — acertos e projeção TRI.<br>
     Nenhum preço, condição ou recurso deste painel vem de fora dessas notas do vault. A projeção TRI usa os microdados do ENEM 2025 e <b>não é nota oficial</b> (resultado individual sai em janeiro/2027). Minutagens referem-se à transmissão de 18/11. Painel gerado em 19/11/2026.
   </footer>
-</div>
+</main>
 
-<script>
-(function(){
-  var nav=document.querySelectorAll('.nav a');
-  var secs=[].map.call(nav,function(a){return document.querySelector(a.getAttribute('href'));});
-  function spy(){
-    var y=window.scrollY+120,idx=0;
-    secs.forEach(function(s,i){ if(s&&s.offsetTop<=y) idx=i; });
-    nav.forEach(function(a,i){ a.classList.toggle('on',i===idx); });
+<nav class="tabbar" aria-label="Navegação do painel">
+  <a class="tab" href="#planos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3.6 7.4 12 11.6l8.4-4.2L12 3.2Z"/><path d="m4.4 12.1 7.6 3.8 7.6-3.8"/><path d="m4.4 16.4 7.6 3.8 7.6-3.8"/></svg>Planos</a>
+  <a class="tab" href="#matriz"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="3.4" width="7.2" height="7.2" rx="1.7"/><rect x="13.4" y="3.4" width="7.2" height="7.2" rx="1.7"/><rect x="3.4" y="13.4" width="7.2" height="7.2" rx="1.7"/><rect x="13.4" y="13.4" width="7.2" height="7.2" rx="1.7"/></svg>Matriz</a>
+  <a class="tab" href="#transicao"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.2" cy="18" r="2.2"/><circle cx="17.8" cy="6" r="2.2"/><path d="M8.4 18h4.2a3.4 3.4 0 0 0 0-6.8H9.4a3.4 3.4 0 0 1 0-6.8h6"/></svg>Rotas</a>
+  <a class="tab" href="#regras"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5.2 5.7v5.4c0 4.2 2.8 7.6 6.8 9.6 4-2 6.8-5.4 6.8-9.6V5.7L12 3Z"/><path d="m9.2 11.9 2.1 2.1 3.9-4.1"/></svg>Regras</a>
+  <a class="tab" href="#otavio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.6 19.4v-6.2"/><path d="M10 19.4V6.6"/><path d="M15.4 19.4v-9"/><path d="M3 21h18"/></svg>Otávio</a>
+  <a class="tab" href="#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.1 3.7h2.1l1.4 3.7-1.9 1.2a10.5 10.5 0 0 0 5.9 5.9l1.2-1.9 3.7 1.4v2.1a2.4 2.4 0 0 1-2.6 2.4C10.7 17.9 6.1 13.3 5.7 6.3a2.4 2.4 0 0 1 2.4-2.6Z"/></svg>Contato</a>
+</nav>
+
+<script>(function(){
+  "use strict";
+  var root=document.documentElement, rootStyle=root.style;
+  function reduced(){return window.matchMedia("(prefers-reduced-motion: reduce)").matches;}
+
+  /* ---------------------------------------------------- tema (antes da 1a pintura: head) */
+  var tbtn=document.getElementById("theme");
+  var meta=document.querySelector('meta[name="theme-color"]');
+  function paintTheme(t){
+    root.dataset.theme=t;
+    if(meta) meta.setAttribute("content", t==="dark" ? "#0B1210" : "#F4F2EC");
+    if(tbtn) tbtn.setAttribute("aria-pressed", t==="dark" ? "true" : "false");
+    try{ localStorage.setItem("afb-theme", t); }catch(e){}
   }
-  window.addEventListener('scroll',spy,{passive:true}); spy();
+  if(!root.dataset.theme){
+    root.dataset.theme = (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  if(tbtn){
+    tbtn.setAttribute("aria-pressed", root.dataset.theme==="dark" ? "true" : "false");
+    tbtn.addEventListener("click", function(){
+      paintTheme(root.dataset.theme==="dark" ? "light" : "dark");
+    });
+  }
 
-  document.getElementById('print').addEventListener('click',function(){window.print();});
+  /* ---------------------------------------------------- altura da barra medida */
+  var bar=document.getElementById("bar");
+  function syncBar(){
+    if(!bar) return;
+    rootStyle.setProperty("--barh", Math.round(bar.getBoundingClientRect().height)+"px");
+  }
+  syncBar();
+  if(bar && window.ResizeObserver){
+    new ResizeObserver(syncBar).observe(bar);
+  } else {
+    window.addEventListener("resize", syncBar);
+  }
 
-  var modo='mes';
-  var btnM=document.getElementById('m-mes'), btnA=document.getElementById('m-ano');
-  var rows=[].slice.call(document.querySelectorAll('.prow'));
+  /* ---------------------------------------------------- mola (passo fixo, interrompivel) */
+  var H=1/240, active=[], raf=0, last=0;
+  function makeSpring(v, apply){
+    return {x:v, v:0, target:v, response:0.34, zeta:1, apply:apply};
+  }
+  function halt(s){ var i=active.indexOf(s); if(i>=0) active.splice(i,1); }
+  function step(s, dt){
+    var left=dt, w0=2*Math.PI/s.response;
+    while(left > 1e-6){
+      var h=Math.min(H, left); left-=h;
+      var a=-w0*w0*(s.x-s.target) - 2*s.zeta*w0*s.v;
+      s.v+=a*h; s.x+=s.v*h;
+    }
+    s.apply(s.x);
+    if(Math.abs(s.v)<0.05 && Math.abs(s.x-s.target)<0.08){ s.x=s.target; s.v=0; s.apply(s.x); return true; }
+    return false;
+  }
+  function tick(now){
+    var dt=Math.min(0.032, Math.max(0.001, (now-last)/1000)); last=now;
+    var keep=[];
+    for(var i=0;i<active.length;i++){ if(!step(active[i], dt)) keep.push(active[i]); }
+    active=keep;
+    raf = active.length ? requestAnimationFrame(tick) : 0;
+  }
+  function run(){ if(raf) return; last=performance.now(); raf=requestAnimationFrame(tick); }
+  function kick(s, target, response, zeta){
+    if(typeof response==="number") s.response=response;
+    s.zeta=(typeof zeta==="number") ? zeta : 1;
+    s.target=target;
+    if(reduced()){ halt(s); s.x=target; s.v=0; s.apply(s.x); return; }
+    if(active.indexOf(s)<0) active.push(s);
+    run();
+  }
+
+  /* ---------------------------------------------------- escada de planos */
+  var modo="mes";
+  var rows=[].slice.call(document.querySelectorAll(".prow"));
+  function brl(v){ return "R$ "+v.toLocaleString("pt-BR"); }
   function pinta(){
     rows.forEach(function(r){
-      var p=+r.dataset.preco, f=r.querySelector('.fill'),
-          lab=r.querySelector('.pval'), anual=(modo==='ano');
-      var v=anual?p*12:p;
-      f.style.width=(p/1500*100)+'%';
-      lab.textContent='R$ '+v.toLocaleString('pt-BR');
-      r.querySelector('.punit').textContent=anual?'/ano':'/mês';
+      var p=+r.dataset.preco, anual=(modo==="ano"), v=anual ? p*12 : p;
+      var val=r.querySelector(".pval"), un=r.querySelector(".punit");
+      if(val) val.textContent=brl(v);
+      if(un) un.textContent=anual ? "/ano" : "/mês";
     });
-    btnM.classList.toggle('on',modo==='mes');
-    btnA.classList.toggle('on',modo==='ano');
-    document.getElementById('ladder-note').textContent = (modo==='ano')
-      ? '12 mensalidades · matrícula não divulgada na live'
-      : 'mensalidade cheia · matrícula não divulgada na live';
+    var note=document.getElementById("ladder-note");
+    if(note) note.textContent = (modo==="ano")
+      ? "12 mensalidades · matrícula não divulgada na live"
+      : "mensalidade cheia · matrícula não divulgada na live";
   }
-  btnM.addEventListener('click',function(){modo='mes';pinta();});
-  btnA.addEventListener('click',function(){modo='ano';pinta();});
+
+  /* ---------------------------------------------------- controle segmentado (mês / ano) */
+  var seg=document.getElementById("seg-mes");
+  if(seg){
+    var sbtns=[].slice.call(seg.querySelectorAll("button"));
+    var thumb=document.createElement("span");
+    thumb.className="seg-thumb";
+    thumb.setAttribute("aria-hidden","true");
+    seg.insertBefore(thumb, seg.firstChild);
+    var sx=makeSpring(0, function(x){ thumb.style.transform="translateX("+x.toFixed(2)+"px)"; });
+    var sw=makeSpring(0, function(w){ thumb.style.width=Math.max(0,w).toFixed(2)+"px"; });
+    function ativo(){ return seg.querySelector('[aria-selected="true"]') || sbtns[0]; }
+    function place(anim){
+      var b=ativo(); if(!b) return;
+      var x=b.offsetLeft, w=b.offsetWidth;
+      if(anim){ kick(sx,x,0.30,1); kick(sw,w,0.30,1); }
+      else { halt(sx); halt(sw); sx.x=x; sx.v=0; sx.apply(x); sw.x=w; sw.v=0; sw.apply(w); }
+    }
+    sbtns.forEach(function(b){
+      b.addEventListener("click", function(){
+        sbtns.forEach(function(o){
+          var on=(o===b);
+          o.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        modo = b.dataset.modo || "mes";
+        pinta();
+        place(true);
+      });
+    });
+    window.addEventListener("resize", function(){ place(false); });
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ place(false); }); }
+    window.addEventListener("load", function(){ place(false); });
+    place(true);
+  }
   pinta();
+
+  /* ---------------------------------------------------- matriz no celular */
+  var chips=[].slice.call(document.querySelectorAll(".chip[data-plan]"));
+  var panels=[].slice.call(document.querySelectorAll(".mplan"));
+  function selPlan(name){
+    chips.forEach(function(c){ c.setAttribute("aria-selected", c.dataset.plan===name ? "true" : "false"); });
+    panels.forEach(function(p){ p.hidden = (p.dataset.plan!==name); });
+  }
+  chips.forEach(function(c){
+    c.addEventListener("click", function(){ selPlan(c.dataset.plan); });
+    c.addEventListener("keydown", function(e){
+      var i=chips.indexOf(c), n=chips.length;
+      if(e.key==="ArrowRight" || e.key==="ArrowLeft"){
+        e.preventDefault();
+        var j=(i + (e.key==="ArrowRight" ? 1 : n-1)) % n;
+        chips[j].focus(); selPlan(chips[j].dataset.plan);
+      }
+    });
+  });
+
+  /* ---------------------------------------------------- navegacao: abas + pills */
+  var ids=["planos","matriz","transicao","regras","otavio","contato"];
+  var secs=ids.map(function(id){ return document.getElementById(id); });
+  var tabs=[].slice.call(document.querySelectorAll(".tab"));
+  var navs=[].slice.call(document.querySelectorAll(".nav a"));
+  var tabbar=document.querySelector(".tabbar");
+  var cur=-2;
+  function barh(){ return parseInt(getComputedStyle(root).getPropertyValue("--barh"),10) || 56; }
+  function setActive(i){
+    tabs.forEach(function(t,k){
+      var on=(k===i);
+      t.classList.toggle("on", on);
+      if(on) t.setAttribute("aria-current","true"); else t.removeAttribute("aria-current");
+    });
+    navs.forEach(function(a){ a.classList.toggle("on", a.getAttribute("href")==="#"+ids[i]); });
+    if(tabbar && tabs[i]){
+      var t=tabs[i], target=t.offsetLeft - (tabbar.clientWidth - t.offsetWidth)/2;
+      if(Math.abs(tabbar.scrollLeft - target) > 6){
+        if(tabbar.scrollTo) tabbar.scrollTo({left:Math.max(0,target), behavior: reduced() ? "auto" : "smooth"});
+        else tabbar.scrollLeft=Math.max(0,target);
+      }
+    }
+  }
+  function spy(){
+    var y=window.scrollY + barh() + 72, idx=0;
+    for(var i=0;i<secs.length;i++){
+      var s=secs[i];
+      if(s && (s.getBoundingClientRect().top + window.scrollY) <= y) idx=i;
+    }
+    if(idx!==cur){ cur=idx; setActive(idx); }
+  }
+  window.addEventListener("scroll", spy, {passive:true});
+  window.addEventListener("resize", spy);
+  spy();
+
+  /* ---------------------------------------------------- impressao */
+  var pbtn=document.getElementById("print");
+  if(pbtn) pbtn.addEventListener("click", function(){ window.print(); });
+
+  /* ---------------------------------------------------- barras: estado final no CSS */
+  var fills=[].slice.call(document.querySelectorAll(".fill,.afill,.cf"));
+  (function(){
+    if(!("IntersectionObserver" in window)) return;
+    fills.forEach(function(f){ f.style.transform="scaleX(0)"; });
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        e.target.style.transform="";
+        io.unobserve(e.target);
+      });
+    },{threshold:0.25});
+    fills.forEach(function(f){ io.observe(f); });
+    setTimeout(function(){
+      fills.forEach(function(f){ f.style.transform=""; try{ io.unobserve(f); }catch(err){} });
+    }, 2200);
+  })();
 })();
 </script>
 </body>
